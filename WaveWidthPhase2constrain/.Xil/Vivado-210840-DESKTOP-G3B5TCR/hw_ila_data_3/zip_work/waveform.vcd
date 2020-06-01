@@ -1,0 +1,67 @@
+$date
+        2019-Nov-25 15:48:56
+$end
+$version
+        Vivado v2017.4 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 16 " example_top/Count [15:0] $end
+$var reg 3 2 example_top/Arithmetic_State [2:0] $end
+$var reg 6 5 example_top/Behind_area [5:0] $end
+$var reg 10 ; Behind_area [15:6] $end
+$var reg 24 E example_top/Second_moment [23:0] $end
+$var reg 21 ] example_top/Square_data [20:0] $end
+$var reg 8 r example_top/Mean_value_remainders [7:0] $end
+$var reg 8 z example_top/Peak_value [7:0] $end
+$var reg 16 $" example_top/Monopulse_num [15:0] $end
+$var reg 1 4" Period_condition_1 $end
+$var reg 1 5" Period_condition_2 $end
+$var reg 1 6" Period_condition_3 $end
+$var reg 1 7" Period_condition_4 $end
+$var reg 1 8" Period_condition_5 $end
+$var reg 1 9" Period_condition_6 $end
+$var reg 1 :" Period_condition_7 $end
+$var reg 1 ;" Period_condition_8 $end
+$var reg 1 <" Period_condition_9 $end
+$var reg 1 =" Period_condition_10 $end
+$var reg 1 >" Period_condition_11 $end
+$var reg 1 ?" Period_condition_12 $end
+$var reg 1 @" Period_condition_13 $end
+$var reg 1 A" Period_condition_14 $end
+$var reg 1 B" Period_condition_15 $end
+$var reg 1 C" Period_condition $end
+$var reg 6 D" example_top/Period_count [5:0] $end
+$var reg 2 J" u_ila_1_WaveState [1:0] $end
+$var reg 16 L" example_top/Monopulse_data1 [15:0] $end
+$var reg 6 \" example_top/Front_area [5:0] $end
+$var reg 10 b" Front_area [15:6] $end
+$var reg 16 l" example_top/Total_area [15:0] $end
+$var reg 41 |" example_top/Fourth_moment [40:0] $end
+$var reg 16 G# example_top/Pulse_point_num [15:0] $end
+$var reg 16 W# example_top/Read_Fifo_Out [15:0] $end
+$var reg 32 g# u_ila_1_SendToArm_Data [31:0] $end
+$var reg 8 )$ u_ila_1_Monopulse_data_1 [7:0] $end
+$var reg 8 1$ example_top/Mean_value [7:0] $end
+$var reg 32 9$ example_top/ReadPosition [31:0] $end
+$var reg 6 Y$ example_top/MonopulsePosition_1 [5:0] $end
+$var reg 10 _$ MonopulsePosition [15:6] $end
+$var reg 16 i$ example_top/MonopulsePosition [31:16] $end
+$var reg 32 y$ example_top/PeriodPoint_num [31:0] $end
+$var reg 33 ;% example_top/Third_moment [32:0] $end
+$var reg 16 \% example_top/time_cnt [15:0] $end
+$var reg 16 l% example_top/ii [15:0] $end
+$var reg 1 |% u_ila_1_Extract_en $end
+$var reg 1 }% u_ila_1_FeatureExtraction_flag $end
+$var reg 1 ~% SendIRQ_OBUF_1 $end
+$var reg 1 !& SendIRQ_OBUF $end
+$var reg 1 "& example_top/S_FeatureExtraction_flag_reg1 $end
+$var reg 1 #& example_top/SendToArm_begin $end
+$var reg 1 $& example_top/SendToArm_Over $end
+$var reg 1 %& _TRIGGER $end
+$var reg 1 && _WINDOW $end
+$var reg 1 '& _GAP $end
+$upscope $end
+$enddefinitions $end

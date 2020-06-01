@@ -1,0 +1,17 @@
+$date
+        2019-Dec-17 22:26:39
+$end
+$version
+        Vivado v2017.4 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 1 " data_reg5_1 $end
+$var reg 1 # data_reg5_2 $end
+$var reg 1 $ _TRIGGER $end
+$var reg 1 % _WINDOW $end
+$var reg 1 & _GAP $end
+$upscope $end
+$enddefinitions $end

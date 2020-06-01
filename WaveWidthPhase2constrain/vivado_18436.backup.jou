@@ -1,0 +1,535 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu May 21 09:25:39 2020
+# Process ID: 18436
+# Current directory: E:/1PD/FPGA/My/WaveWidthPhase2constrain
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18208 E:\1PD\FPGA\My\WaveWidthPhase2constrain\PLToPS1.xpr
+# Log file: E:/1PD/FPGA/My/WaveWidthPhase2constrain/vivado.log
+# Journal file: E:/1PD/FPGA/My/WaveWidthPhase2constrain\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.xpr
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.bit} [get_hw_devices xc7z035_1]
+set_property PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property FULL_PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+current_hw_device [get_hw_devices xc7z035_1]
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+set_property PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property FULL_PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property PROGRAM.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.bit} [get_hw_devices xc7z035_1]
+program_hw_devices [get_hw_devices xc7z035_1]
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_2"}]]
+add_wave -into {hw_ila_data_2.wcfg} -radix unsigned { {example_top/Read_Fifo_Out} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]]
+file copy -force E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.sysdef E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.sdk/system_wrapper.hdf
+
+launch_sdk -workspace E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.sdk -hwspec E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.sdk/system_wrapper.hdf
+save_wave_config {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+save_wave_config {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.hw/hw_1/wave/hw_ila_data_3/hw_ila_data_3.wcfg}
+close_hw
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.bit} [get_hw_devices xc7z035_1]
+set_property PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property FULL_PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+current_hw_device [get_hw_devices xc7z035_1]
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+set_property PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property FULL_PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property PROGRAM.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.bit} [get_hw_devices xc7z035_1]
+program_hw_devices [get_hw_devices xc7z035_1]
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_2"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+save_wave_config {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+save_wave_config {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.hw/hw_1/wave/hw_ila_data_3/hw_ila_data_3.wcfg}
+close_hw
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.bit} [get_hw_devices xc7z035_1]
+set_property PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property FULL_PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+current_hw_device [get_hw_devices xc7z035_1]
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+set_property PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property FULL_PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property PROGRAM.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.bit} [get_hw_devices xc7z035_1]
+program_hw_devices [get_hw_devices xc7z035_1]
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_2"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+save_wave_config {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+save_wave_config {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.hw/hw_1/wave/hw_ila_data_3/hw_ila_data_3.wcfg}
+close_hw
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.bit} [get_hw_devices xc7z035_1]
+set_property PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property FULL_PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+current_hw_device [get_hw_devices xc7z035_1]
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+set_property PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property FULL_PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property PROGRAM.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.bit} [get_hw_devices xc7z035_1]
+program_hw_devices [get_hw_devices xc7z035_1]
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_2"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+save_wave_config {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+save_wave_config {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.hw/hw_1/wave/hw_ila_data_3/hw_ila_data_3.wcfg}
+close_hw
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.bit} [get_hw_devices xc7z035_1]
+set_property PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property FULL_PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+current_hw_device [get_hw_devices xc7z035_1]
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+close_hw
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.bit} [get_hw_devices xc7z035_1]
+set_property PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property FULL_PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+current_hw_device [get_hw_devices xc7z035_1]
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+close_hw
+reset_run synth_1
+launch_runs synth_1 -jobs 3
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+delete_debug_core [get_debug_cores {u_ila_0 u_ila_1 u_ila_2 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+create_debug_core u_ila_1 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_1]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_1]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_1]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_1]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_1]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_1]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_1]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_1]
+create_debug_core u_ila_2 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_2]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_2]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_2]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_2]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_2]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_2]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_2]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_2]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list example_top/u_mig_7series_0/u_mig_7series_0_mig/u_ddr3_infrastructure/CLK ]]
+set_property port_width 1 [get_debug_ports u_ila_1/clk]
+connect_debug_port u_ila_1/clk [get_nets [list example_top/CLK_WIZ_DDR/inst/clk_out2 ]]
+set_property port_width 1 [get_debug_ports u_ila_2/clk]
+connect_debug_port u_ila_2/clk [get_nets [list system_i/processing_system7_0/inst/FCLK_CLK0 ]]
+set_property port_width 29 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {example_top/app_addr[0]} {example_top/app_addr[1]} {example_top/app_addr[2]} {example_top/app_addr[3]} {example_top/app_addr[4]} {example_top/app_addr[5]} {example_top/app_addr[6]} {example_top/app_addr[7]} {example_top/app_addr[8]} {example_top/app_addr[9]} {example_top/app_addr[10]} {example_top/app_addr[11]} {example_top/app_addr[12]} {example_top/app_addr[13]} {example_top/app_addr[14]} {example_top/app_addr[15]} {example_top/app_addr[16]} {example_top/app_addr[17]} {example_top/app_addr[18]} {example_top/app_addr[19]} {example_top/app_addr[20]} {example_top/app_addr[21]} {example_top/app_addr[22]} {example_top/app_addr[23]} {example_top/app_addr[24]} {example_top/app_addr[25]} {example_top/app_addr[26]} {example_top/app_addr[27]} {example_top/app_addr[28]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 128 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {example_top/Write_Fifo_Out[0]} {example_top/Write_Fifo_Out[1]} {example_top/Write_Fifo_Out[2]} {example_top/Write_Fifo_Out[3]} {example_top/Write_Fifo_Out[4]} {example_top/Write_Fifo_Out[5]} {example_top/Write_Fifo_Out[6]} {example_top/Write_Fifo_Out[7]} {example_top/Write_Fifo_Out[8]} {example_top/Write_Fifo_Out[9]} {example_top/Write_Fifo_Out[10]} {example_top/Write_Fifo_Out[11]} {example_top/Write_Fifo_Out[12]} {example_top/Write_Fifo_Out[13]} {example_top/Write_Fifo_Out[14]} {example_top/Write_Fifo_Out[15]} {example_top/Write_Fifo_Out[16]} {example_top/Write_Fifo_Out[17]} {example_top/Write_Fifo_Out[18]} {example_top/Write_Fifo_Out[19]} {example_top/Write_Fifo_Out[20]} {example_top/Write_Fifo_Out[21]} {example_top/Write_Fifo_Out[22]} {example_top/Write_Fifo_Out[23]} {example_top/Write_Fifo_Out[24]} {example_top/Write_Fifo_Out[25]} {example_top/Write_Fifo_Out[26]} {example_top/Write_Fifo_Out[27]} {example_top/Write_Fifo_Out[28]} {example_top/Write_Fifo_Out[29]} {example_top/Write_Fifo_Out[30]} {example_top/Write_Fifo_Out[31]} {example_top/Write_Fifo_Out[32]} {example_top/Write_Fifo_Out[33]} {example_top/Write_Fifo_Out[34]} {example_top/Write_Fifo_Out[35]} {example_top/Write_Fifo_Out[36]} {example_top/Write_Fifo_Out[37]} {example_top/Write_Fifo_Out[38]} {example_top/Write_Fifo_Out[39]} {example_top/Write_Fifo_Out[40]} {example_top/Write_Fifo_Out[41]} {example_top/Write_Fifo_Out[42]} {example_top/Write_Fifo_Out[43]} {example_top/Write_Fifo_Out[44]} {example_top/Write_Fifo_Out[45]} {example_top/Write_Fifo_Out[46]} {example_top/Write_Fifo_Out[47]} {example_top/Write_Fifo_Out[48]} {example_top/Write_Fifo_Out[49]} {example_top/Write_Fifo_Out[50]} {example_top/Write_Fifo_Out[51]} {example_top/Write_Fifo_Out[52]} {example_top/Write_Fifo_Out[53]} {example_top/Write_Fifo_Out[54]} {example_top/Write_Fifo_Out[55]} {example_top/Write_Fifo_Out[56]} {example_top/Write_Fifo_Out[57]} {example_top/Write_Fifo_Out[58]} {example_top/Write_Fifo_Out[59]} {example_top/Write_Fifo_Out[60]} {example_top/Write_Fifo_Out[61]} {example_top/Write_Fifo_Out[62]} {example_top/Write_Fifo_Out[63]} {example_top/Write_Fifo_Out[64]} {example_top/Write_Fifo_Out[65]} {example_top/Write_Fifo_Out[66]} {example_top/Write_Fifo_Out[67]} {example_top/Write_Fifo_Out[68]} {example_top/Write_Fifo_Out[69]} {example_top/Write_Fifo_Out[70]} {example_top/Write_Fifo_Out[71]} {example_top/Write_Fifo_Out[72]} {example_top/Write_Fifo_Out[73]} {example_top/Write_Fifo_Out[74]} {example_top/Write_Fifo_Out[75]} {example_top/Write_Fifo_Out[76]} {example_top/Write_Fifo_Out[77]} {example_top/Write_Fifo_Out[78]} {example_top/Write_Fifo_Out[79]} {example_top/Write_Fifo_Out[80]} {example_top/Write_Fifo_Out[81]} {example_top/Write_Fifo_Out[82]} {example_top/Write_Fifo_Out[83]} {example_top/Write_Fifo_Out[84]} {example_top/Write_Fifo_Out[85]} {example_top/Write_Fifo_Out[86]} {example_top/Write_Fifo_Out[87]} {example_top/Write_Fifo_Out[88]} {example_top/Write_Fifo_Out[89]} {example_top/Write_Fifo_Out[90]} {example_top/Write_Fifo_Out[91]} {example_top/Write_Fifo_Out[92]} {example_top/Write_Fifo_Out[93]} {example_top/Write_Fifo_Out[94]} {example_top/Write_Fifo_Out[95]} {example_top/Write_Fifo_Out[96]} {example_top/Write_Fifo_Out[97]} {example_top/Write_Fifo_Out[98]} {example_top/Write_Fifo_Out[99]} {example_top/Write_Fifo_Out[100]} {example_top/Write_Fifo_Out[101]} {example_top/Write_Fifo_Out[102]} {example_top/Write_Fifo_Out[103]} {example_top/Write_Fifo_Out[104]} {example_top/Write_Fifo_Out[105]} {example_top/Write_Fifo_Out[106]} {example_top/Write_Fifo_Out[107]} {example_top/Write_Fifo_Out[108]} {example_top/Write_Fifo_Out[109]} {example_top/Write_Fifo_Out[110]} {example_top/Write_Fifo_Out[111]} {example_top/Write_Fifo_Out[112]} {example_top/Write_Fifo_Out[113]} {example_top/Write_Fifo_Out[114]} {example_top/Write_Fifo_Out[115]} {example_top/Write_Fifo_Out[116]} {example_top/Write_Fifo_Out[117]} {example_top/Write_Fifo_Out[118]} {example_top/Write_Fifo_Out[119]} {example_top/Write_Fifo_Out[120]} {example_top/Write_Fifo_Out[121]} {example_top/Write_Fifo_Out[122]} {example_top/Write_Fifo_Out[123]} {example_top/Write_Fifo_Out[124]} {example_top/Write_Fifo_Out[125]} {example_top/Write_Fifo_Out[126]} {example_top/Write_Fifo_Out[127]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 8 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {example_top/Write_Fifo_datain[0]} {example_top/Write_Fifo_datain[1]} {example_top/Write_Fifo_datain[2]} {example_top/Write_Fifo_datain[3]} {example_top/Write_Fifo_datain[4]} {example_top/Write_Fifo_datain[5]} {example_top/Write_Fifo_datain[6]} {example_top/Write_Fifo_datain[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 8 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {example_top/Write_Fifo_rusdw_o[0]} {example_top/Write_Fifo_rusdw_o[1]} {example_top/Write_Fifo_rusdw_o[2]} {example_top/Write_Fifo_rusdw_o[3]} {example_top/Write_Fifo_rusdw_o[4]} {example_top/Write_Fifo_rusdw_o[5]} {example_top/Write_Fifo_rusdw_o[6]} {example_top/Write_Fifo_rusdw_o[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 4 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list {example_top/state[0]} {example_top/state[1]} {example_top/state[2]} {example_top/state[3]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list example_top/Write_Fifo_empty ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe6]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list example_top/Write_Fifo_full ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe7]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
+connect_debug_port u_ila_0/probe7 [get_nets [list example_top/Write_Fifo_wr_en ]]
+set_property port_width 8 [get_debug_ports u_ila_1/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe0]
+connect_debug_port u_ila_1/probe0 [get_nets [list {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Monopulse_data_vi[0]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Monopulse_data_vi[1]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Monopulse_data_vi[2]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Monopulse_data_vi[3]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Monopulse_data_vi[4]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Monopulse_data_vi[5]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Monopulse_data_vi[6]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Monopulse_data_vi[7]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 10 [get_debug_ports u_ila_1/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe1]
+connect_debug_port u_ila_1/probe1 [get_nets [list {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data2[0]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data2[1]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data2[2]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data2[3]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data2[4]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data2[5]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data2[6]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data2[7]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data2[8]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data2[9]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 9 [get_debug_ports u_ila_1/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe2]
+connect_debug_port u_ila_1/probe2 [get_nets [list {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data_n[0]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data_n[1]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data_n[2]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data_n[3]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data_n[4]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data_n[5]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data_n[6]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data_n[7]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data_n[8]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 21 [get_debug_ports u_ila_1/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe3]
+connect_debug_port u_ila_1/probe3 [get_nets [list {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[0]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[1]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[2]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[3]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[4]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[5]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[6]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[7]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[8]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[9]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[10]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[11]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[12]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[13]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[14]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[15]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[16]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[17]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[18]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[19]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[20]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 41 [get_debug_ports u_ila_1/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe4]
+connect_debug_port u_ila_1/probe4 [get_nets [list {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[0]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[1]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[2]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[3]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[4]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[5]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[6]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[7]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[8]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[9]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[10]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[11]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[12]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[13]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[14]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[15]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[16]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[17]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[18]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[19]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[20]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[21]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[22]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[23]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[24]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[25]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[26]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[27]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[28]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[29]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[30]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[31]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[32]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[33]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[34]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[35]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[36]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[37]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[38]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[39]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[40]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 33 [get_debug_ports u_ila_1/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe5]
+connect_debug_port u_ila_1/probe5 [get_nets [list {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[0]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[1]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[2]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[3]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[4]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[5]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[6]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[7]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[8]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[9]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[10]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[11]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[12]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[13]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[14]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[15]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[16]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[17]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[18]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[19]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[20]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[21]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[22]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[23]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[24]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[25]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[26]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[27]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[28]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[29]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[30]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[31]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[32]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 8 [get_debug_ports u_ila_1/probe6]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe6]
+connect_debug_port u_ila_1/probe6 [get_nets [list {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/Gentle_num[0]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/Gentle_num[1]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/Gentle_num[2]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/Gentle_num[3]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/Gentle_num[4]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/Gentle_num[5]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/Gentle_num[6]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/Gentle_num[7]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 16 [get_debug_ports u_ila_1/probe7]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe7]
+connect_debug_port u_ila_1/probe7 [get_nets [list {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[0]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[1]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[2]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[3]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[4]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[5]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[6]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[7]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[8]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[9]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[10]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[11]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[12]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[13]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[14]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[15]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 16 [get_debug_ports u_ila_1/probe8]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe8]
+connect_debug_port u_ila_1/probe8 [get_nets [list {example_top/Read_Fifo_Out[0]} {example_top/Read_Fifo_Out[1]} {example_top/Read_Fifo_Out[2]} {example_top/Read_Fifo_Out[3]} {example_top/Read_Fifo_Out[4]} {example_top/Read_Fifo_Out[5]} {example_top/Read_Fifo_Out[6]} {example_top/Read_Fifo_Out[7]} {example_top/Read_Fifo_Out[8]} {example_top/Read_Fifo_Out[9]} {example_top/Read_Fifo_Out[10]} {example_top/Read_Fifo_Out[11]} {example_top/Read_Fifo_Out[12]} {example_top/Read_Fifo_Out[13]} {example_top/Read_Fifo_Out[14]} {example_top/Read_Fifo_Out[15]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 32 [get_debug_ports u_ila_1/probe9]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe9]
+connect_debug_port u_ila_1/probe9 [get_nets [list {example_top/feature_num[0]} {example_top/feature_num[1]} {example_top/feature_num[2]} {example_top/feature_num[3]} {example_top/feature_num[4]} {example_top/feature_num[5]} {example_top/feature_num[6]} {example_top/feature_num[7]} {example_top/feature_num[8]} {example_top/feature_num[9]} {example_top/feature_num[10]} {example_top/feature_num[11]} {example_top/feature_num[12]} {example_top/feature_num[13]} {example_top/feature_num[14]} {example_top/feature_num[15]} {example_top/feature_num[16]} {example_top/feature_num[17]} {example_top/feature_num[18]} {example_top/feature_num[19]} {example_top/feature_num[20]} {example_top/feature_num[21]} {example_top/feature_num[22]} {example_top/feature_num[23]} {example_top/feature_num[24]} {example_top/feature_num[25]} {example_top/feature_num[26]} {example_top/feature_num[27]} {example_top/feature_num[28]} {example_top/feature_num[29]} {example_top/feature_num[30]} {example_top/feature_num[31]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe10]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe10]
+connect_debug_port u_ila_1/probe10 [get_nets [list example_top/S_FeatureExtraction_flag_reg1 ]]
+set_property port_width 1 [get_debug_ports u_ila_2/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe0]
+connect_debug_port u_ila_2/probe0 [get_nets [list example_top/SendToArm_begin ]]
+create_debug_port u_ila_2 probe
+set_property port_width 1 [get_debug_ports u_ila_2/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe1]
+connect_debug_port u_ila_2/probe1 [get_nets [list example_top/SendToArm_Over ]]
+save_constraints
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+open_hw
+file copy -force E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.sysdef E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.sdk/system_wrapper.hdf
+
+file copy -force E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.sysdef E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.sdk/system_wrapper.hdf
+
+launch_sdk -workspace E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.sdk -hwspec E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.sdk/system_wrapper.hdf
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.bit} [get_hw_devices xc7z035_1]
+set_property PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property FULL_PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+current_hw_device [get_hw_devices xc7z035_1]
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+set_property PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property FULL_PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property PROGRAM.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.bit} [get_hw_devices xc7z035_1]
+program_hw_devices [get_hw_devices xc7z035_1]
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_2"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+save_wave_config {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+save_wave_config {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.hw/hw_1/wave/hw_ila_data_3/hw_ila_data_3.wcfg}
+close_hw
+file copy -force E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.sysdef E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.hdf
+
+file copy -force E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.bit E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.bit
+file copy -force E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.bit E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.bit
+launch_sdk -workspace E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.sdk -hwspec E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.hdf
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.bit} [get_hw_devices xc7z035_1]
+set_property PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property FULL_PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+current_hw_device [get_hw_devices xc7z035_1]
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+set_property PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property FULL_PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property PROGRAM.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.bit} [get_hw_devices xc7z035_1]
+program_hw_devices [get_hw_devices xc7z035_1]
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_2"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+set_property TRIGGER_COMPARE_VALUE eq16'hXXXX [get_hw_probes example_top/Read_Fifo_Out -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes example_top/S_FeatureExtraction_flag_reg1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes example_top/S_FeatureExtraction_flag_reg1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes example_top/S_FeatureExtraction_flag_reg1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+save_wave_config {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+save_wave_config {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.hw/hw_1/wave/hw_ila_data_3/hw_ila_data_3.wcfg}
+close_hw
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.bit} [get_hw_devices xc7z035_1]
+set_property PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property FULL_PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+current_hw_device [get_hw_devices xc7z035_1]
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+set_property PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property FULL_PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property PROGRAM.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.bit} [get_hw_devices xc7z035_1]
+program_hw_devices [get_hw_devices xc7z035_1]
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_2"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_1"}] -trigger_now
+save_wave_config {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+save_wave_config {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.hw/hw_1/wave/hw_ila_data_3/hw_ila_data_3.wcfg}
+close_hw
+reset_run synth_1
+launch_runs synth_1 -jobs 3
+wait_on_run synth_1
+refresh_design
+delete_debug_core [get_debug_cores {u_ila_0 u_ila_1 u_ila_2 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+create_debug_core u_ila_1 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_1]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_1]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_1]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_1]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_1]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_1]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_1]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_1]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list example_top/u_mig_7series_0/u_mig_7series_0_mig/u_ddr3_infrastructure/CLK ]]
+set_property port_width 1 [get_debug_ports u_ila_1/clk]
+connect_debug_port u_ila_1/clk [get_nets [list example_top/CLK_WIZ_DDR/inst/clk_out2 ]]
+set_property port_width 29 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {example_top/app_addr[0]} {example_top/app_addr[1]} {example_top/app_addr[2]} {example_top/app_addr[3]} {example_top/app_addr[4]} {example_top/app_addr[5]} {example_top/app_addr[6]} {example_top/app_addr[7]} {example_top/app_addr[8]} {example_top/app_addr[9]} {example_top/app_addr[10]} {example_top/app_addr[11]} {example_top/app_addr[12]} {example_top/app_addr[13]} {example_top/app_addr[14]} {example_top/app_addr[15]} {example_top/app_addr[16]} {example_top/app_addr[17]} {example_top/app_addr[18]} {example_top/app_addr[19]} {example_top/app_addr[20]} {example_top/app_addr[21]} {example_top/app_addr[22]} {example_top/app_addr[23]} {example_top/app_addr[24]} {example_top/app_addr[25]} {example_top/app_addr[26]} {example_top/app_addr[27]} {example_top/app_addr[28]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 4 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {example_top/state[0]} {example_top/state[1]} {example_top/state[2]} {example_top/state[3]} ]]
+set_property port_width 16 [get_debug_ports u_ila_1/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe0]
+connect_debug_port u_ila_1/probe0 [get_nets [list {example_top/Read_Fifo_Out[0]} {example_top/Read_Fifo_Out[1]} {example_top/Read_Fifo_Out[2]} {example_top/Read_Fifo_Out[3]} {example_top/Read_Fifo_Out[4]} {example_top/Read_Fifo_Out[5]} {example_top/Read_Fifo_Out[6]} {example_top/Read_Fifo_Out[7]} {example_top/Read_Fifo_Out[8]} {example_top/Read_Fifo_Out[9]} {example_top/Read_Fifo_Out[10]} {example_top/Read_Fifo_Out[11]} {example_top/Read_Fifo_Out[12]} {example_top/Read_Fifo_Out[13]} {example_top/Read_Fifo_Out[14]} {example_top/Read_Fifo_Out[15]} ]]
+save_constraints
+delete_debug_core [get_debug_cores {u_ila_0 u_ila_1 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list example_top/CLK_WIZ_DDR/inst/clk_out2 ]]
+set_property port_width 16 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {example_top/Read_Fifo_Out[0]} {example_top/Read_Fifo_Out[1]} {example_top/Read_Fifo_Out[2]} {example_top/Read_Fifo_Out[3]} {example_top/Read_Fifo_Out[4]} {example_top/Read_Fifo_Out[5]} {example_top/Read_Fifo_Out[6]} {example_top/Read_Fifo_Out[7]} {example_top/Read_Fifo_Out[8]} {example_top/Read_Fifo_Out[9]} {example_top/Read_Fifo_Out[10]} {example_top/Read_Fifo_Out[11]} {example_top/Read_Fifo_Out[12]} {example_top/Read_Fifo_Out[13]} {example_top/Read_Fifo_Out[14]} {example_top/Read_Fifo_Out[15]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 29 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {example_top/app_addr[0]} {example_top/app_addr[1]} {example_top/app_addr[2]} {example_top/app_addr[3]} {example_top/app_addr[4]} {example_top/app_addr[5]} {example_top/app_addr[6]} {example_top/app_addr[7]} {example_top/app_addr[8]} {example_top/app_addr[9]} {example_top/app_addr[10]} {example_top/app_addr[11]} {example_top/app_addr[12]} {example_top/app_addr[13]} {example_top/app_addr[14]} {example_top/app_addr[15]} {example_top/app_addr[16]} {example_top/app_addr[17]} {example_top/app_addr[18]} {example_top/app_addr[19]} {example_top/app_addr[20]} {example_top/app_addr[21]} {example_top/app_addr[22]} {example_top/app_addr[23]} {example_top/app_addr[24]} {example_top/app_addr[25]} {example_top/app_addr[26]} {example_top/app_addr[27]} {example_top/app_addr[28]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 4 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {example_top/state[0]} {example_top/state[1]} {example_top/state[2]} {example_top/state[3]} ]]
+save_constraints
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+open_hw
+file copy -force E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.sysdef E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.hdf
+
+launch_sdk -workspace E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.sdk -hwspec E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.hdf
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.bit} [get_hw_devices xc7z035_1]
+set_property PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property FULL_PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+current_hw_device [get_hw_devices xc7z035_1]
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+set_property PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property FULL_PROBES.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.ltx} [get_hw_devices xc7z035_1]
+set_property PROGRAM.FILE {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.runs/impl_1/system_wrapper.bit} [get_hw_devices xc7z035_1]
+program_hw_devices [get_hw_devices xc7z035_1]
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {example_top/Read_Fifo_Out} {example_top/state} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {example_top/app_addr} {example_top/Read_Fifo_Out} {example_top/state} }
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq4'h4 [get_hw_probes example_top/state -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z035_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+save_wave_config {E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw

@@ -1,0 +1,383 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu May 21 08:57:02 2020
+# Process ID: 22448
+# Current directory: E:/1PD/FPGA/My/WaveWidthPhase2 - constrain
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent340 E:\1PD\FPGA\My\WaveWidthPhase2 - constrain\PLToPS1.xpr
+# Log file: E:/1PD/FPGA/My/WaveWidthPhase2 - constrain/vivado.log
+# Journal file: E:/1PD/FPGA/My/WaveWidthPhase2 - constrain\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {E:/1PD/FPGA/My/WaveWidthPhase2 - constrain/PLToPS1.xpr}
+open_run synth_1 -name synth_1
+update_compile_order -fileset sources_1
+create_generated_clock -name clk_200 -source [get_pins example_top/CLK_WIZ_DDR/clk_in1] -multiply_by 2 -add -master_clock [get_clocks  "*clk_100m*"] [get_pins example_top/CLK_WIZ_DDR/clk_out2]
+save_constraints
+create_generated_clock -name clk_25 -source [get_pins example_top/CLK_WIZ_DDR/clk_in1] -divide_by 4 -add -master_clock [get_clocks  "*clk_100m*"] [get_pins example_top/CLK_WIZ_DDR/clk_out3]
+save_constraints
+set_input_delay -clock [get_clocks  "*dco_n*"] -min -add_delay -0.5 [get_ports -filter { NAME =~  "*adc_p1*" && DIRECTION == "IN" }]
+save_constraints
+set_input_delay -clock [get_clocks  "*dco_n*"] -max -add_delay 0.7 [get_ports -filter { NAME =~  "*adc_p1*" && DIRECTION == "IN" }]
+save_constraints
+set_input_delay -clock [get_clocks  "*dco_p*"] -max -add_delay 0.7 [get_ports -filter { NAME =~  "*adc_p2*" && DIRECTION == "IN" }]
+save_constraints
+set_input_delay -clock [get_clocks  "*dco_p*"] -min -add_delay -0.5 [get_ports -filter { NAME =~  "*adc_p2*" && DIRECTION == "IN" }]
+save_constraints
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+refresh_design
+delete_debug_core [get_debug_cores {u_ila_0 u_ila_1 u_ila_2 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+create_debug_core u_ila_1 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_1]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_1]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_1]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_1]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_1]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_1]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_1]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_1]
+create_debug_core u_ila_2 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_2]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_2]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_2]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_2]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_2]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_2]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_2]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_2]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list example_top/u_mig_7series_0/u_mig_7series_0_mig/u_ddr3_infrastructure/CLK ]]
+set_property port_width 1 [get_debug_ports u_ila_1/clk]
+connect_debug_port u_ila_1/clk [get_nets [list example_top/CLK_WIZ_DDR/inst/clk_out2 ]]
+set_property port_width 1 [get_debug_ports u_ila_2/clk]
+connect_debug_port u_ila_2/clk [get_nets [list system_i/processing_system7_0/inst/FCLK_CLK0 ]]
+set_property port_width 32 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {example_top/CountRead_tem[0]} {example_top/CountRead_tem[1]} {example_top/CountRead_tem[2]} {example_top/CountRead_tem[3]} {example_top/CountRead_tem[4]} {example_top/CountRead_tem[5]} {example_top/CountRead_tem[6]} {example_top/CountRead_tem[7]} {example_top/CountRead_tem[8]} {example_top/CountRead_tem[9]} {example_top/CountRead_tem[10]} {example_top/CountRead_tem[11]} {example_top/CountRead_tem[12]} {example_top/CountRead_tem[13]} {example_top/CountRead_tem[14]} {example_top/CountRead_tem[15]} {example_top/CountRead_tem[16]} {example_top/CountRead_tem[17]} {example_top/CountRead_tem[18]} {example_top/CountRead_tem[19]} {example_top/CountRead_tem[20]} {example_top/CountRead_tem[21]} {example_top/CountRead_tem[22]} {example_top/CountRead_tem[23]} {example_top/CountRead_tem[24]} {example_top/CountRead_tem[25]} {example_top/CountRead_tem[26]} {example_top/CountRead_tem[27]} {example_top/CountRead_tem[28]} {example_top/CountRead_tem[29]} {example_top/CountRead_tem[30]} {example_top/CountRead_tem[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {example_top/CountWrite_tem[0]} {example_top/CountWrite_tem[1]} {example_top/CountWrite_tem[2]} {example_top/CountWrite_tem[3]} {example_top/CountWrite_tem[4]} {example_top/CountWrite_tem[5]} {example_top/CountWrite_tem[6]} {example_top/CountWrite_tem[7]} {example_top/CountWrite_tem[8]} {example_top/CountWrite_tem[9]} {example_top/CountWrite_tem[10]} {example_top/CountWrite_tem[11]} {example_top/CountWrite_tem[12]} {example_top/CountWrite_tem[13]} {example_top/CountWrite_tem[14]} {example_top/CountWrite_tem[15]} {example_top/CountWrite_tem[16]} {example_top/CountWrite_tem[17]} {example_top/CountWrite_tem[18]} {example_top/CountWrite_tem[19]} {example_top/CountWrite_tem[20]} {example_top/CountWrite_tem[21]} {example_top/CountWrite_tem[22]} {example_top/CountWrite_tem[23]} {example_top/CountWrite_tem[24]} {example_top/CountWrite_tem[25]} {example_top/CountWrite_tem[26]} {example_top/CountWrite_tem[27]} {example_top/CountWrite_tem[28]} {example_top/CountWrite_tem[29]} {example_top/CountWrite_tem[30]} {example_top/CountWrite_tem[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 29 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {example_top/app_addr[0]} {example_top/app_addr[1]} {example_top/app_addr[2]} {example_top/app_addr[3]} {example_top/app_addr[4]} {example_top/app_addr[5]} {example_top/app_addr[6]} {example_top/app_addr[7]} {example_top/app_addr[8]} {example_top/app_addr[9]} {example_top/app_addr[10]} {example_top/app_addr[11]} {example_top/app_addr[12]} {example_top/app_addr[13]} {example_top/app_addr[14]} {example_top/app_addr[15]} {example_top/app_addr[16]} {example_top/app_addr[17]} {example_top/app_addr[18]} {example_top/app_addr[19]} {example_top/app_addr[20]} {example_top/app_addr[21]} {example_top/app_addr[22]} {example_top/app_addr[23]} {example_top/app_addr[24]} {example_top/app_addr[25]} {example_top/app_addr[26]} {example_top/app_addr[27]} {example_top/app_addr[28]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 29 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {example_top/app_addr_begin[0]} {example_top/app_addr_begin[1]} {example_top/app_addr_begin[2]} {example_top/app_addr_begin[3]} {example_top/app_addr_begin[4]} {example_top/app_addr_begin[5]} {example_top/app_addr_begin[6]} {example_top/app_addr_begin[7]} {example_top/app_addr_begin[8]} {example_top/app_addr_begin[9]} {example_top/app_addr_begin[10]} {example_top/app_addr_begin[11]} {example_top/app_addr_begin[12]} {example_top/app_addr_begin[13]} {example_top/app_addr_begin[14]} {example_top/app_addr_begin[15]} {example_top/app_addr_begin[16]} {example_top/app_addr_begin[17]} {example_top/app_addr_begin[18]} {example_top/app_addr_begin[19]} {example_top/app_addr_begin[20]} {example_top/app_addr_begin[21]} {example_top/app_addr_begin[22]} {example_top/app_addr_begin[23]} {example_top/app_addr_begin[24]} {example_top/app_addr_begin[25]} {example_top/app_addr_begin[26]} {example_top/app_addr_begin[27]} {example_top/app_addr_begin[28]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 6 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list {example_top/Period_count[0]} {example_top/Period_count[1]} {example_top/Period_count[2]} {example_top/Period_count[3]} {example_top/Period_count[4]} {example_top/Period_count[5]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 8 [get_debug_ports u_ila_0/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list {example_top/Read_Fifo_wusdw_o[0]} {example_top/Read_Fifo_wusdw_o[1]} {example_top/Read_Fifo_wusdw_o[2]} {example_top/Read_Fifo_wusdw_o[3]} {example_top/Read_Fifo_wusdw_o[4]} {example_top/Read_Fifo_wusdw_o[5]} {example_top/Read_Fifo_wusdw_o[6]} {example_top/Read_Fifo_wusdw_o[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 8 [get_debug_ports u_ila_0/probe6]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list {example_top/Write_Fifo_datain[0]} {example_top/Write_Fifo_datain[1]} {example_top/Write_Fifo_datain[2]} {example_top/Write_Fifo_datain[3]} {example_top/Write_Fifo_datain[4]} {example_top/Write_Fifo_datain[5]} {example_top/Write_Fifo_datain[6]} {example_top/Write_Fifo_datain[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 128 [get_debug_ports u_ila_0/probe7]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
+connect_debug_port u_ila_0/probe7 [get_nets [list {example_top/app_rd_data[0]} {example_top/app_rd_data[1]} {example_top/app_rd_data[2]} {example_top/app_rd_data[3]} {example_top/app_rd_data[4]} {example_top/app_rd_data[5]} {example_top/app_rd_data[6]} {example_top/app_rd_data[7]} {example_top/app_rd_data[8]} {example_top/app_rd_data[9]} {example_top/app_rd_data[10]} {example_top/app_rd_data[11]} {example_top/app_rd_data[12]} {example_top/app_rd_data[13]} {example_top/app_rd_data[14]} {example_top/app_rd_data[15]} {example_top/app_rd_data[16]} {example_top/app_rd_data[17]} {example_top/app_rd_data[18]} {example_top/app_rd_data[19]} {example_top/app_rd_data[20]} {example_top/app_rd_data[21]} {example_top/app_rd_data[22]} {example_top/app_rd_data[23]} {example_top/app_rd_data[24]} {example_top/app_rd_data[25]} {example_top/app_rd_data[26]} {example_top/app_rd_data[27]} {example_top/app_rd_data[28]} {example_top/app_rd_data[29]} {example_top/app_rd_data[30]} {example_top/app_rd_data[31]} {example_top/app_rd_data[32]} {example_top/app_rd_data[33]} {example_top/app_rd_data[34]} {example_top/app_rd_data[35]} {example_top/app_rd_data[36]} {example_top/app_rd_data[37]} {example_top/app_rd_data[38]} {example_top/app_rd_data[39]} {example_top/app_rd_data[40]} {example_top/app_rd_data[41]} {example_top/app_rd_data[42]} {example_top/app_rd_data[43]} {example_top/app_rd_data[44]} {example_top/app_rd_data[45]} {example_top/app_rd_data[46]} {example_top/app_rd_data[47]} {example_top/app_rd_data[48]} {example_top/app_rd_data[49]} {example_top/app_rd_data[50]} {example_top/app_rd_data[51]} {example_top/app_rd_data[52]} {example_top/app_rd_data[53]} {example_top/app_rd_data[54]} {example_top/app_rd_data[55]} {example_top/app_rd_data[56]} {example_top/app_rd_data[57]} {example_top/app_rd_data[58]} {example_top/app_rd_data[59]} {example_top/app_rd_data[60]} {example_top/app_rd_data[61]} {example_top/app_rd_data[62]} {example_top/app_rd_data[63]} {example_top/app_rd_data[64]} {example_top/app_rd_data[65]} {example_top/app_rd_data[66]} {example_top/app_rd_data[67]} {example_top/app_rd_data[68]} {example_top/app_rd_data[69]} {example_top/app_rd_data[70]} {example_top/app_rd_data[71]} {example_top/app_rd_data[72]} {example_top/app_rd_data[73]} {example_top/app_rd_data[74]} {example_top/app_rd_data[75]} {example_top/app_rd_data[76]} {example_top/app_rd_data[77]} {example_top/app_rd_data[78]} {example_top/app_rd_data[79]} {example_top/app_rd_data[80]} {example_top/app_rd_data[81]} {example_top/app_rd_data[82]} {example_top/app_rd_data[83]} {example_top/app_rd_data[84]} {example_top/app_rd_data[85]} {example_top/app_rd_data[86]} {example_top/app_rd_data[87]} {example_top/app_rd_data[88]} {example_top/app_rd_data[89]} {example_top/app_rd_data[90]} {example_top/app_rd_data[91]} {example_top/app_rd_data[92]} {example_top/app_rd_data[93]} {example_top/app_rd_data[94]} {example_top/app_rd_data[95]} {example_top/app_rd_data[96]} {example_top/app_rd_data[97]} {example_top/app_rd_data[98]} {example_top/app_rd_data[99]} {example_top/app_rd_data[100]} {example_top/app_rd_data[101]} {example_top/app_rd_data[102]} {example_top/app_rd_data[103]} {example_top/app_rd_data[104]} {example_top/app_rd_data[105]} {example_top/app_rd_data[106]} {example_top/app_rd_data[107]} {example_top/app_rd_data[108]} {example_top/app_rd_data[109]} {example_top/app_rd_data[110]} {example_top/app_rd_data[111]} {example_top/app_rd_data[112]} {example_top/app_rd_data[113]} {example_top/app_rd_data[114]} {example_top/app_rd_data[115]} {example_top/app_rd_data[116]} {example_top/app_rd_data[117]} {example_top/app_rd_data[118]} {example_top/app_rd_data[119]} {example_top/app_rd_data[120]} {example_top/app_rd_data[121]} {example_top/app_rd_data[122]} {example_top/app_rd_data[123]} {example_top/app_rd_data[124]} {example_top/app_rd_data[125]} {example_top/app_rd_data[126]} {example_top/app_rd_data[127]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 128 [get_debug_ports u_ila_0/probe8]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe8]
+connect_debug_port u_ila_0/probe8 [get_nets [list {example_top/app_wdf_data[0]} {example_top/app_wdf_data[1]} {example_top/app_wdf_data[2]} {example_top/app_wdf_data[3]} {example_top/app_wdf_data[4]} {example_top/app_wdf_data[5]} {example_top/app_wdf_data[6]} {example_top/app_wdf_data[7]} {example_top/app_wdf_data[8]} {example_top/app_wdf_data[9]} {example_top/app_wdf_data[10]} {example_top/app_wdf_data[11]} {example_top/app_wdf_data[12]} {example_top/app_wdf_data[13]} {example_top/app_wdf_data[14]} {example_top/app_wdf_data[15]} {example_top/app_wdf_data[16]} {example_top/app_wdf_data[17]} {example_top/app_wdf_data[18]} {example_top/app_wdf_data[19]} {example_top/app_wdf_data[20]} {example_top/app_wdf_data[21]} {example_top/app_wdf_data[22]} {example_top/app_wdf_data[23]} {example_top/app_wdf_data[24]} {example_top/app_wdf_data[25]} {example_top/app_wdf_data[26]} {example_top/app_wdf_data[27]} {example_top/app_wdf_data[28]} {example_top/app_wdf_data[29]} {example_top/app_wdf_data[30]} {example_top/app_wdf_data[31]} {example_top/app_wdf_data[32]} {example_top/app_wdf_data[33]} {example_top/app_wdf_data[34]} {example_top/app_wdf_data[35]} {example_top/app_wdf_data[36]} {example_top/app_wdf_data[37]} {example_top/app_wdf_data[38]} {example_top/app_wdf_data[39]} {example_top/app_wdf_data[40]} {example_top/app_wdf_data[41]} {example_top/app_wdf_data[42]} {example_top/app_wdf_data[43]} {example_top/app_wdf_data[44]} {example_top/app_wdf_data[45]} {example_top/app_wdf_data[46]} {example_top/app_wdf_data[47]} {example_top/app_wdf_data[48]} {example_top/app_wdf_data[49]} {example_top/app_wdf_data[50]} {example_top/app_wdf_data[51]} {example_top/app_wdf_data[52]} {example_top/app_wdf_data[53]} {example_top/app_wdf_data[54]} {example_top/app_wdf_data[55]} {example_top/app_wdf_data[56]} {example_top/app_wdf_data[57]} {example_top/app_wdf_data[58]} {example_top/app_wdf_data[59]} {example_top/app_wdf_data[60]} {example_top/app_wdf_data[61]} {example_top/app_wdf_data[62]} {example_top/app_wdf_data[63]} {example_top/app_wdf_data[64]} {example_top/app_wdf_data[65]} {example_top/app_wdf_data[66]} {example_top/app_wdf_data[67]} {example_top/app_wdf_data[68]} {example_top/app_wdf_data[69]} {example_top/app_wdf_data[70]} {example_top/app_wdf_data[71]} {example_top/app_wdf_data[72]} {example_top/app_wdf_data[73]} {example_top/app_wdf_data[74]} {example_top/app_wdf_data[75]} {example_top/app_wdf_data[76]} {example_top/app_wdf_data[77]} {example_top/app_wdf_data[78]} {example_top/app_wdf_data[79]} {example_top/app_wdf_data[80]} {example_top/app_wdf_data[81]} {example_top/app_wdf_data[82]} {example_top/app_wdf_data[83]} {example_top/app_wdf_data[84]} {example_top/app_wdf_data[85]} {example_top/app_wdf_data[86]} {example_top/app_wdf_data[87]} {example_top/app_wdf_data[88]} {example_top/app_wdf_data[89]} {example_top/app_wdf_data[90]} {example_top/app_wdf_data[91]} {example_top/app_wdf_data[92]} {example_top/app_wdf_data[93]} {example_top/app_wdf_data[94]} {example_top/app_wdf_data[95]} {example_top/app_wdf_data[96]} {example_top/app_wdf_data[97]} {example_top/app_wdf_data[98]} {example_top/app_wdf_data[99]} {example_top/app_wdf_data[100]} {example_top/app_wdf_data[101]} {example_top/app_wdf_data[102]} {example_top/app_wdf_data[103]} {example_top/app_wdf_data[104]} {example_top/app_wdf_data[105]} {example_top/app_wdf_data[106]} {example_top/app_wdf_data[107]} {example_top/app_wdf_data[108]} {example_top/app_wdf_data[109]} {example_top/app_wdf_data[110]} {example_top/app_wdf_data[111]} {example_top/app_wdf_data[112]} {example_top/app_wdf_data[113]} {example_top/app_wdf_data[114]} {example_top/app_wdf_data[115]} {example_top/app_wdf_data[116]} {example_top/app_wdf_data[117]} {example_top/app_wdf_data[118]} {example_top/app_wdf_data[119]} {example_top/app_wdf_data[120]} {example_top/app_wdf_data[121]} {example_top/app_wdf_data[122]} {example_top/app_wdf_data[123]} {example_top/app_wdf_data[124]} {example_top/app_wdf_data[125]} {example_top/app_wdf_data[126]} {example_top/app_wdf_data[127]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 8 [get_debug_ports u_ila_0/probe9]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe9]
+connect_debug_port u_ila_0/probe9 [get_nets [list {example_top/Write_Fifo_rusdw_o[0]} {example_top/Write_Fifo_rusdw_o[1]} {example_top/Write_Fifo_rusdw_o[2]} {example_top/Write_Fifo_rusdw_o[3]} {example_top/Write_Fifo_rusdw_o[4]} {example_top/Write_Fifo_rusdw_o[5]} {example_top/Write_Fifo_rusdw_o[6]} {example_top/Write_Fifo_rusdw_o[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 128 [get_debug_ports u_ila_0/probe10]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe10]
+connect_debug_port u_ila_0/probe10 [get_nets [list {example_top/Write_Fifo_Out[0]} {example_top/Write_Fifo_Out[1]} {example_top/Write_Fifo_Out[2]} {example_top/Write_Fifo_Out[3]} {example_top/Write_Fifo_Out[4]} {example_top/Write_Fifo_Out[5]} {example_top/Write_Fifo_Out[6]} {example_top/Write_Fifo_Out[7]} {example_top/Write_Fifo_Out[8]} {example_top/Write_Fifo_Out[9]} {example_top/Write_Fifo_Out[10]} {example_top/Write_Fifo_Out[11]} {example_top/Write_Fifo_Out[12]} {example_top/Write_Fifo_Out[13]} {example_top/Write_Fifo_Out[14]} {example_top/Write_Fifo_Out[15]} {example_top/Write_Fifo_Out[16]} {example_top/Write_Fifo_Out[17]} {example_top/Write_Fifo_Out[18]} {example_top/Write_Fifo_Out[19]} {example_top/Write_Fifo_Out[20]} {example_top/Write_Fifo_Out[21]} {example_top/Write_Fifo_Out[22]} {example_top/Write_Fifo_Out[23]} {example_top/Write_Fifo_Out[24]} {example_top/Write_Fifo_Out[25]} {example_top/Write_Fifo_Out[26]} {example_top/Write_Fifo_Out[27]} {example_top/Write_Fifo_Out[28]} {example_top/Write_Fifo_Out[29]} {example_top/Write_Fifo_Out[30]} {example_top/Write_Fifo_Out[31]} {example_top/Write_Fifo_Out[32]} {example_top/Write_Fifo_Out[33]} {example_top/Write_Fifo_Out[34]} {example_top/Write_Fifo_Out[35]} {example_top/Write_Fifo_Out[36]} {example_top/Write_Fifo_Out[37]} {example_top/Write_Fifo_Out[38]} {example_top/Write_Fifo_Out[39]} {example_top/Write_Fifo_Out[40]} {example_top/Write_Fifo_Out[41]} {example_top/Write_Fifo_Out[42]} {example_top/Write_Fifo_Out[43]} {example_top/Write_Fifo_Out[44]} {example_top/Write_Fifo_Out[45]} {example_top/Write_Fifo_Out[46]} {example_top/Write_Fifo_Out[47]} {example_top/Write_Fifo_Out[48]} {example_top/Write_Fifo_Out[49]} {example_top/Write_Fifo_Out[50]} {example_top/Write_Fifo_Out[51]} {example_top/Write_Fifo_Out[52]} {example_top/Write_Fifo_Out[53]} {example_top/Write_Fifo_Out[54]} {example_top/Write_Fifo_Out[55]} {example_top/Write_Fifo_Out[56]} {example_top/Write_Fifo_Out[57]} {example_top/Write_Fifo_Out[58]} {example_top/Write_Fifo_Out[59]} {example_top/Write_Fifo_Out[60]} {example_top/Write_Fifo_Out[61]} {example_top/Write_Fifo_Out[62]} {example_top/Write_Fifo_Out[63]} {example_top/Write_Fifo_Out[64]} {example_top/Write_Fifo_Out[65]} {example_top/Write_Fifo_Out[66]} {example_top/Write_Fifo_Out[67]} {example_top/Write_Fifo_Out[68]} {example_top/Write_Fifo_Out[69]} {example_top/Write_Fifo_Out[70]} {example_top/Write_Fifo_Out[71]} {example_top/Write_Fifo_Out[72]} {example_top/Write_Fifo_Out[73]} {example_top/Write_Fifo_Out[74]} {example_top/Write_Fifo_Out[75]} {example_top/Write_Fifo_Out[76]} {example_top/Write_Fifo_Out[77]} {example_top/Write_Fifo_Out[78]} {example_top/Write_Fifo_Out[79]} {example_top/Write_Fifo_Out[80]} {example_top/Write_Fifo_Out[81]} {example_top/Write_Fifo_Out[82]} {example_top/Write_Fifo_Out[83]} {example_top/Write_Fifo_Out[84]} {example_top/Write_Fifo_Out[85]} {example_top/Write_Fifo_Out[86]} {example_top/Write_Fifo_Out[87]} {example_top/Write_Fifo_Out[88]} {example_top/Write_Fifo_Out[89]} {example_top/Write_Fifo_Out[90]} {example_top/Write_Fifo_Out[91]} {example_top/Write_Fifo_Out[92]} {example_top/Write_Fifo_Out[93]} {example_top/Write_Fifo_Out[94]} {example_top/Write_Fifo_Out[95]} {example_top/Write_Fifo_Out[96]} {example_top/Write_Fifo_Out[97]} {example_top/Write_Fifo_Out[98]} {example_top/Write_Fifo_Out[99]} {example_top/Write_Fifo_Out[100]} {example_top/Write_Fifo_Out[101]} {example_top/Write_Fifo_Out[102]} {example_top/Write_Fifo_Out[103]} {example_top/Write_Fifo_Out[104]} {example_top/Write_Fifo_Out[105]} {example_top/Write_Fifo_Out[106]} {example_top/Write_Fifo_Out[107]} {example_top/Write_Fifo_Out[108]} {example_top/Write_Fifo_Out[109]} {example_top/Write_Fifo_Out[110]} {example_top/Write_Fifo_Out[111]} {example_top/Write_Fifo_Out[112]} {example_top/Write_Fifo_Out[113]} {example_top/Write_Fifo_Out[114]} {example_top/Write_Fifo_Out[115]} {example_top/Write_Fifo_Out[116]} {example_top/Write_Fifo_Out[117]} {example_top/Write_Fifo_Out[118]} {example_top/Write_Fifo_Out[119]} {example_top/Write_Fifo_Out[120]} {example_top/Write_Fifo_Out[121]} {example_top/Write_Fifo_Out[122]} {example_top/Write_Fifo_Out[123]} {example_top/Write_Fifo_Out[124]} {example_top/Write_Fifo_Out[125]} {example_top/Write_Fifo_Out[126]} {example_top/Write_Fifo_Out[127]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 4 [get_debug_ports u_ila_0/probe11]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe11]
+connect_debug_port u_ila_0/probe11 [get_nets [list {example_top/state1[0]} {example_top/state1[1]} {example_top/state1[2]} {example_top/state1[3]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 4 [get_debug_ports u_ila_0/probe12]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe12]
+connect_debug_port u_ila_0/probe12 [get_nets [list {example_top/state[0]} {example_top/state[1]} {example_top/state[2]} {example_top/state[3]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe13]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe13]
+connect_debug_port u_ila_0/probe13 [get_nets [list example_top/app_rd_data_valid ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe14]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe14]
+connect_debug_port u_ila_0/probe14 [get_nets [list example_top/app_rdy ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe15]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe15]
+connect_debug_port u_ila_0/probe15 [get_nets [list example_top/app_wdf_rdy ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe16]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe16]
+connect_debug_port u_ila_0/probe16 [get_nets [list example_top/ddr3_oneperiod_flag ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe17]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe17]
+connect_debug_port u_ila_0/probe17 [get_nets [list example_top/ddr3read_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe18]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe18]
+connect_debug_port u_ila_0/probe18 [get_nets [list example_top/ddr3write_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe19]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe19]
+connect_debug_port u_ila_0/probe19 [get_nets [list example_top/OnePeriod_flag ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe20]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe20]
+connect_debug_port u_ila_0/probe20 [get_nets [list example_top/Period_flag ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe21]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe21]
+connect_debug_port u_ila_0/probe21 [get_nets [list example_top/ProsessIn ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe22]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe22]
+connect_debug_port u_ila_0/probe22 [get_nets [list example_top/ProsessIn1 ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe23]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe23]
+connect_debug_port u_ila_0/probe23 [get_nets [list example_top/Read_Fifo_full ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe24]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe24]
+connect_debug_port u_ila_0/probe24 [get_nets [list example_top/Read_Fifo_in_en1 ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe25]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe25]
+connect_debug_port u_ila_0/probe25 [get_nets [list example_top/Read_Fifo_rst ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe26]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe26]
+connect_debug_port u_ila_0/probe26 [get_nets [list example_top/Read_Fifo_wren ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe27]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe27]
+connect_debug_port u_ila_0/probe27 [get_nets [list example_top/Write_Fifo_empty ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe28]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe28]
+connect_debug_port u_ila_0/probe28 [get_nets [list example_top/Write_Fifo_full ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe29]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe29]
+connect_debug_port u_ila_0/probe29 [get_nets [list example_top/Write_Fifo_wr_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe30]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe30]
+connect_debug_port u_ila_0/probe30 [get_nets [list example_top/WriteSign ]]
+set_property port_width 41 [get_debug_ports u_ila_1/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe0]
+connect_debug_port u_ila_1/probe0 [get_nets [list {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[0]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[1]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[2]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[3]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[4]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[5]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[6]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[7]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[8]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[9]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[10]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[11]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[12]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[13]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[14]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[15]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[16]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[17]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[18]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[19]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[20]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[21]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[22]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[23]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[24]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[25]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[26]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[27]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[28]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[29]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[30]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[31]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[32]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[33]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[34]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[35]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[36]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[37]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[38]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[39]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data[40]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 33 [get_debug_ports u_ila_1/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe1]
+connect_debug_port u_ila_1/probe1 [get_nets [list {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[0]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[1]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[2]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[3]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[4]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[5]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[6]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[7]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[8]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[9]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[10]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[11]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[12]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[13]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[14]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[15]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[16]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[17]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[18]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[19]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[20]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[21]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[22]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[23]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[24]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[25]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[26]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[27]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[28]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[29]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[30]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[31]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data[32]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 9 [get_debug_ports u_ila_1/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe2]
+connect_debug_port u_ila_1/probe2 [get_nets [list {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data_n[0]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data_n[1]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data_n[2]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data_n[3]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data_n[4]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data_n[5]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data_n[6]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data_n[7]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data_n[8]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 21 [get_debug_ports u_ila_1/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe3]
+connect_debug_port u_ila_1/probe3 [get_nets [list {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[0]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[1]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[2]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[3]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[4]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[5]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[6]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[7]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[8]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[9]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[10]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[11]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[12]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[13]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[14]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[15]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[16]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[17]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[18]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[19]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Square_data[20]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 8 [get_debug_ports u_ila_1/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe4]
+connect_debug_port u_ila_1/probe4 [get_nets [list {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Monopulse_data_vi[0]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Monopulse_data_vi[1]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Monopulse_data_vi[2]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Monopulse_data_vi[3]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Monopulse_data_vi[4]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Monopulse_data_vi[5]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Monopulse_data_vi[6]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/Monopulse_data_vi[7]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 10 [get_debug_ports u_ila_1/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe5]
+connect_debug_port u_ila_1/probe5 [get_nets [list {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data2[0]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data2[1]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data2[2]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data2[3]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data2[4]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data2[5]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data2[6]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data2[7]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data2[8]} {example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data2[9]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 3 [get_debug_ports u_ila_1/probe6]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe6]
+connect_debug_port u_ila_1/probe6 [get_nets [list {example_top/Arithmetic_State[0]} {example_top/Arithmetic_State[1]} {example_top/Arithmetic_State[2]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 16 [get_debug_ports u_ila_1/probe7]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe7]
+connect_debug_port u_ila_1/probe7 [get_nets [list {example_top/Behind_area[0]} {example_top/Behind_area[1]} {example_top/Behind_area[2]} {example_top/Behind_area[3]} {example_top/Behind_area[4]} {example_top/Behind_area[5]} {example_top/Behind_area[6]} {example_top/Behind_area[7]} {example_top/Behind_area[8]} {example_top/Behind_area[9]} {example_top/Behind_area[10]} {example_top/Behind_area[11]} {example_top/Behind_area[12]} {example_top/Behind_area[13]} {example_top/Behind_area[14]} {example_top/Behind_area[15]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 16 [get_debug_ports u_ila_1/probe8]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe8]
+connect_debug_port u_ila_1/probe8 [get_nets [list {example_top/Count[0]} {example_top/Count[1]} {example_top/Count[2]} {example_top/Count[3]} {example_top/Count[4]} {example_top/Count[5]} {example_top/Count[6]} {example_top/Count[7]} {example_top/Count[8]} {example_top/Count[9]} {example_top/Count[10]} {example_top/Count[11]} {example_top/Count[12]} {example_top/Count[13]} {example_top/Count[14]} {example_top/Count[15]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 11 [get_debug_ports u_ila_1/probe9]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe9]
+connect_debug_port u_ila_1/probe9 [get_nets [list {example_top/Read_Fifo_rusdw_o[0]} {example_top/Read_Fifo_rusdw_o[1]} {example_top/Read_Fifo_rusdw_o[2]} {example_top/Read_Fifo_rusdw_o[3]} {example_top/Read_Fifo_rusdw_o[4]} {example_top/Read_Fifo_rusdw_o[5]} {example_top/Read_Fifo_rusdw_o[6]} {example_top/Read_Fifo_rusdw_o[7]} {example_top/Read_Fifo_rusdw_o[8]} {example_top/Read_Fifo_rusdw_o[9]} {example_top/Read_Fifo_rusdw_o[10]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 41 [get_debug_ports u_ila_1/probe10]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe10]
+connect_debug_port u_ila_1/probe10 [get_nets [list {example_top/Fourth_moment[0]} {example_top/Fourth_moment[1]} {example_top/Fourth_moment[2]} {example_top/Fourth_moment[3]} {example_top/Fourth_moment[4]} {example_top/Fourth_moment[5]} {example_top/Fourth_moment[6]} {example_top/Fourth_moment[7]} {example_top/Fourth_moment[8]} {example_top/Fourth_moment[9]} {example_top/Fourth_moment[10]} {example_top/Fourth_moment[11]} {example_top/Fourth_moment[12]} {example_top/Fourth_moment[13]} {example_top/Fourth_moment[14]} {example_top/Fourth_moment[15]} {example_top/Fourth_moment[16]} {example_top/Fourth_moment[17]} {example_top/Fourth_moment[18]} {example_top/Fourth_moment[19]} {example_top/Fourth_moment[20]} {example_top/Fourth_moment[21]} {example_top/Fourth_moment[22]} {example_top/Fourth_moment[23]} {example_top/Fourth_moment[24]} {example_top/Fourth_moment[25]} {example_top/Fourth_moment[26]} {example_top/Fourth_moment[27]} {example_top/Fourth_moment[28]} {example_top/Fourth_moment[29]} {example_top/Fourth_moment[30]} {example_top/Fourth_moment[31]} {example_top/Fourth_moment[32]} {example_top/Fourth_moment[33]} {example_top/Fourth_moment[34]} {example_top/Fourth_moment[35]} {example_top/Fourth_moment[36]} {example_top/Fourth_moment[37]} {example_top/Fourth_moment[38]} {example_top/Fourth_moment[39]} {example_top/Fourth_moment[40]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 16 [get_debug_ports u_ila_1/probe11]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe11]
+connect_debug_port u_ila_1/probe11 [get_nets [list {example_top/Monopulse_num[0]} {example_top/Monopulse_num[1]} {example_top/Monopulse_num[2]} {example_top/Monopulse_num[3]} {example_top/Monopulse_num[4]} {example_top/Monopulse_num[5]} {example_top/Monopulse_num[6]} {example_top/Monopulse_num[7]} {example_top/Monopulse_num[8]} {example_top/Monopulse_num[9]} {example_top/Monopulse_num[10]} {example_top/Monopulse_num[11]} {example_top/Monopulse_num[12]} {example_top/Monopulse_num[13]} {example_top/Monopulse_num[14]} {example_top/Monopulse_num[15]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 32 [get_debug_ports u_ila_1/probe12]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe12]
+connect_debug_port u_ila_1/probe12 [get_nets [list {example_top/PeriodPoint_num[0]} {example_top/PeriodPoint_num[1]} {example_top/PeriodPoint_num[2]} {example_top/PeriodPoint_num[3]} {example_top/PeriodPoint_num[4]} {example_top/PeriodPoint_num[5]} {example_top/PeriodPoint_num[6]} {example_top/PeriodPoint_num[7]} {example_top/PeriodPoint_num[8]} {example_top/PeriodPoint_num[9]} {example_top/PeriodPoint_num[10]} {example_top/PeriodPoint_num[11]} {example_top/PeriodPoint_num[12]} {example_top/PeriodPoint_num[13]} {example_top/PeriodPoint_num[14]} {example_top/PeriodPoint_num[15]} {example_top/PeriodPoint_num[16]} {example_top/PeriodPoint_num[17]} {example_top/PeriodPoint_num[18]} {example_top/PeriodPoint_num[19]} {example_top/PeriodPoint_num[20]} {example_top/PeriodPoint_num[21]} {example_top/PeriodPoint_num[22]} {example_top/PeriodPoint_num[23]} {example_top/PeriodPoint_num[24]} {example_top/PeriodPoint_num[25]} {example_top/PeriodPoint_num[26]} {example_top/PeriodPoint_num[27]} {example_top/PeriodPoint_num[28]} {example_top/PeriodPoint_num[29]} {example_top/PeriodPoint_num[30]} {example_top/PeriodPoint_num[31]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 16 [get_debug_ports u_ila_1/probe13]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe13]
+connect_debug_port u_ila_1/probe13 [get_nets [list {example_top/Read_Fifo_Out[0]} {example_top/Read_Fifo_Out[1]} {example_top/Read_Fifo_Out[2]} {example_top/Read_Fifo_Out[3]} {example_top/Read_Fifo_Out[4]} {example_top/Read_Fifo_Out[5]} {example_top/Read_Fifo_Out[6]} {example_top/Read_Fifo_Out[7]} {example_top/Read_Fifo_Out[8]} {example_top/Read_Fifo_Out[9]} {example_top/Read_Fifo_Out[10]} {example_top/Read_Fifo_Out[11]} {example_top/Read_Fifo_Out[12]} {example_top/Read_Fifo_Out[13]} {example_top/Read_Fifo_Out[14]} {example_top/Read_Fifo_Out[15]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 16 [get_debug_ports u_ila_1/probe14]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe14]
+connect_debug_port u_ila_1/probe14 [get_nets [list {example_top/Read_Fifo_Out_r[0]} {example_top/Read_Fifo_Out_r[1]} {example_top/Read_Fifo_Out_r[2]} {example_top/Read_Fifo_Out_r[3]} {example_top/Read_Fifo_Out_r[4]} {example_top/Read_Fifo_Out_r[5]} {example_top/Read_Fifo_Out_r[6]} {example_top/Read_Fifo_Out_r[7]} {example_top/Read_Fifo_Out_r[8]} {example_top/Read_Fifo_Out_r[9]} {example_top/Read_Fifo_Out_r[10]} {example_top/Read_Fifo_Out_r[11]} {example_top/Read_Fifo_Out_r[12]} {example_top/Read_Fifo_Out_r[13]} {example_top/Read_Fifo_Out_r[14]} {example_top/Read_Fifo_Out_r[15]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 24 [get_debug_ports u_ila_1/probe15]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe15]
+connect_debug_port u_ila_1/probe15 [get_nets [list {example_top/Second_moment[0]} {example_top/Second_moment[1]} {example_top/Second_moment[2]} {example_top/Second_moment[3]} {example_top/Second_moment[4]} {example_top/Second_moment[5]} {example_top/Second_moment[6]} {example_top/Second_moment[7]} {example_top/Second_moment[8]} {example_top/Second_moment[9]} {example_top/Second_moment[10]} {example_top/Second_moment[11]} {example_top/Second_moment[12]} {example_top/Second_moment[13]} {example_top/Second_moment[14]} {example_top/Second_moment[15]} {example_top/Second_moment[16]} {example_top/Second_moment[17]} {example_top/Second_moment[18]} {example_top/Second_moment[19]} {example_top/Second_moment[20]} {example_top/Second_moment[21]} {example_top/Second_moment[22]} {example_top/Second_moment[23]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 33 [get_debug_ports u_ila_1/probe16]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe16]
+connect_debug_port u_ila_1/probe16 [get_nets [list {example_top/Third_moment[0]} {example_top/Third_moment[1]} {example_top/Third_moment[2]} {example_top/Third_moment[3]} {example_top/Third_moment[4]} {example_top/Third_moment[5]} {example_top/Third_moment[6]} {example_top/Third_moment[7]} {example_top/Third_moment[8]} {example_top/Third_moment[9]} {example_top/Third_moment[10]} {example_top/Third_moment[11]} {example_top/Third_moment[12]} {example_top/Third_moment[13]} {example_top/Third_moment[14]} {example_top/Third_moment[15]} {example_top/Third_moment[16]} {example_top/Third_moment[17]} {example_top/Third_moment[18]} {example_top/Third_moment[19]} {example_top/Third_moment[20]} {example_top/Third_moment[21]} {example_top/Third_moment[22]} {example_top/Third_moment[23]} {example_top/Third_moment[24]} {example_top/Third_moment[25]} {example_top/Third_moment[26]} {example_top/Third_moment[27]} {example_top/Third_moment[28]} {example_top/Third_moment[29]} {example_top/Third_moment[30]} {example_top/Third_moment[31]} {example_top/Third_moment[32]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 2 [get_debug_ports u_ila_1/probe17]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe17]
+connect_debug_port u_ila_1/probe17 [get_nets [list {example_top/WaveState[0]} {example_top/WaveState[1]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 16 [get_debug_ports u_ila_1/probe18]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe18]
+connect_debug_port u_ila_1/probe18 [get_nets [list {example_top/Front_area[0]} {example_top/Front_area[1]} {example_top/Front_area[2]} {example_top/Front_area[3]} {example_top/Front_area[4]} {example_top/Front_area[5]} {example_top/Front_area[6]} {example_top/Front_area[7]} {example_top/Front_area[8]} {example_top/Front_area[9]} {example_top/Front_area[10]} {example_top/Front_area[11]} {example_top/Front_area[12]} {example_top/Front_area[13]} {example_top/Front_area[14]} {example_top/Front_area[15]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 16 [get_debug_ports u_ila_1/probe19]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe19]
+connect_debug_port u_ila_1/probe19 [get_nets [list {example_top/Pulse_point_num[0]} {example_top/Pulse_point_num[1]} {example_top/Pulse_point_num[2]} {example_top/Pulse_point_num[3]} {example_top/Pulse_point_num[4]} {example_top/Pulse_point_num[5]} {example_top/Pulse_point_num[6]} {example_top/Pulse_point_num[7]} {example_top/Pulse_point_num[8]} {example_top/Pulse_point_num[9]} {example_top/Pulse_point_num[10]} {example_top/Pulse_point_num[11]} {example_top/Pulse_point_num[12]} {example_top/Pulse_point_num[13]} {example_top/Pulse_point_num[14]} {example_top/Pulse_point_num[15]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 16 [get_debug_ports u_ila_1/probe20]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe20]
+connect_debug_port u_ila_1/probe20 [get_nets [list {example_top/Monopulse_data1[0]} {example_top/Monopulse_data1[1]} {example_top/Monopulse_data1[2]} {example_top/Monopulse_data1[3]} {example_top/Monopulse_data1[4]} {example_top/Monopulse_data1[5]} {example_top/Monopulse_data1[6]} {example_top/Monopulse_data1[7]} {example_top/Monopulse_data1[8]} {example_top/Monopulse_data1[9]} {example_top/Monopulse_data1[10]} {example_top/Monopulse_data1[11]} {example_top/Monopulse_data1[12]} {example_top/Monopulse_data1[13]} {example_top/Monopulse_data1[14]} {example_top/Monopulse_data1[15]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 8 [get_debug_ports u_ila_1/probe21]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe21]
+connect_debug_port u_ila_1/probe21 [get_nets [list {example_top/Monopulse_data_1[0]} {example_top/Monopulse_data_1[1]} {example_top/Monopulse_data_1[2]} {example_top/Monopulse_data_1[3]} {example_top/Monopulse_data_1[4]} {example_top/Monopulse_data_1[5]} {example_top/Monopulse_data_1[6]} {example_top/Monopulse_data_1[7]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 16 [get_debug_ports u_ila_1/probe22]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe22]
+connect_debug_port u_ila_1/probe22 [get_nets [list {example_top/time_cnt[0]} {example_top/time_cnt[1]} {example_top/time_cnt[2]} {example_top/time_cnt[3]} {example_top/time_cnt[4]} {example_top/time_cnt[5]} {example_top/time_cnt[6]} {example_top/time_cnt[7]} {example_top/time_cnt[8]} {example_top/time_cnt[9]} {example_top/time_cnt[10]} {example_top/time_cnt[11]} {example_top/time_cnt[12]} {example_top/time_cnt[13]} {example_top/time_cnt[14]} {example_top/time_cnt[15]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 25 [get_debug_ports u_ila_1/probe23]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe23]
+connect_debug_port u_ila_1/probe23 [get_nets [list {example_top/ddr3read_en1[0]} {example_top/ddr3read_en1[1]} {example_top/ddr3read_en1[2]} {example_top/ddr3read_en1[3]} {example_top/ddr3read_en1[4]} {example_top/ddr3read_en1[5]} {example_top/ddr3read_en1[6]} {example_top/ddr3read_en1[7]} {example_top/ddr3read_en1[8]} {example_top/ddr3read_en1[9]} {example_top/ddr3read_en1[10]} {example_top/ddr3read_en1[11]} {example_top/ddr3read_en1[12]} {example_top/ddr3read_en1[13]} {example_top/ddr3read_en1[14]} {example_top/ddr3read_en1[15]} {example_top/ddr3read_en1[16]} {example_top/ddr3read_en1[17]} {example_top/ddr3read_en1[18]} {example_top/ddr3read_en1[19]} {example_top/ddr3read_en1[20]} {example_top/ddr3read_en1[21]} {example_top/ddr3read_en1[22]} {example_top/ddr3read_en1[23]} {example_top/ddr3read_en1[24]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 16 [get_debug_ports u_ila_1/probe24]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe24]
+connect_debug_port u_ila_1/probe24 [get_nets [list {example_top/ii[0]} {example_top/ii[1]} {example_top/ii[2]} {example_top/ii[3]} {example_top/ii[4]} {example_top/ii[5]} {example_top/ii[6]} {example_top/ii[7]} {example_top/ii[8]} {example_top/ii[9]} {example_top/ii[10]} {example_top/ii[11]} {example_top/ii[12]} {example_top/ii[13]} {example_top/ii[14]} {example_top/ii[15]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 25 [get_debug_ports u_ila_1/probe25]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe25]
+connect_debug_port u_ila_1/probe25 [get_nets [list {example_top/ddr3read_en2[0]} {example_top/ddr3read_en2[1]} {example_top/ddr3read_en2[2]} {example_top/ddr3read_en2[3]} {example_top/ddr3read_en2[4]} {example_top/ddr3read_en2[5]} {example_top/ddr3read_en2[6]} {example_top/ddr3read_en2[7]} {example_top/ddr3read_en2[8]} {example_top/ddr3read_en2[9]} {example_top/ddr3read_en2[10]} {example_top/ddr3read_en2[11]} {example_top/ddr3read_en2[12]} {example_top/ddr3read_en2[13]} {example_top/ddr3read_en2[14]} {example_top/ddr3read_en2[15]} {example_top/ddr3read_en2[16]} {example_top/ddr3read_en2[17]} {example_top/ddr3read_en2[18]} {example_top/ddr3read_en2[19]} {example_top/ddr3read_en2[20]} {example_top/ddr3read_en2[21]} {example_top/ddr3read_en2[22]} {example_top/ddr3read_en2[23]} {example_top/ddr3read_en2[24]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 32 [get_debug_ports u_ila_1/probe26]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe26]
+connect_debug_port u_ila_1/probe26 [get_nets [list {example_top/feature_num[0]} {example_top/feature_num[1]} {example_top/feature_num[2]} {example_top/feature_num[3]} {example_top/feature_num[4]} {example_top/feature_num[5]} {example_top/feature_num[6]} {example_top/feature_num[7]} {example_top/feature_num[8]} {example_top/feature_num[9]} {example_top/feature_num[10]} {example_top/feature_num[11]} {example_top/feature_num[12]} {example_top/feature_num[13]} {example_top/feature_num[14]} {example_top/feature_num[15]} {example_top/feature_num[16]} {example_top/feature_num[17]} {example_top/feature_num[18]} {example_top/feature_num[19]} {example_top/feature_num[20]} {example_top/feature_num[21]} {example_top/feature_num[22]} {example_top/feature_num[23]} {example_top/feature_num[24]} {example_top/feature_num[25]} {example_top/feature_num[26]} {example_top/feature_num[27]} {example_top/feature_num[28]} {example_top/feature_num[29]} {example_top/feature_num[30]} {example_top/feature_num[31]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 8 [get_debug_ports u_ila_1/probe27]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe27]
+connect_debug_port u_ila_1/probe27 [get_nets [list {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/Gentle_num[0]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/Gentle_num[1]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/Gentle_num[2]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/Gentle_num[3]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/Gentle_num[4]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/Gentle_num[5]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/Gentle_num[6]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/Gentle_num[7]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 16 [get_debug_ports u_ila_1/probe28]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe28]
+connect_debug_port u_ila_1/probe28 [get_nets [list {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[0]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[1]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[2]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[3]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[4]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[5]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[6]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[7]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[8]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[9]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[10]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[11]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[12]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[13]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[14]} {example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count[15]} ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe29]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe29]
+connect_debug_port u_ila_1/probe29 [get_nets [list example_top/FeatureExtraction_flag ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe30]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe30]
+connect_debug_port u_ila_1/probe30 [get_nets [list example_top/FeatureExtraction_flag_reg ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe31]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe31]
+connect_debug_port u_ila_1/probe31 [get_nets [list example_top/Read_Fifo_empty ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe32]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe32]
+connect_debug_port u_ila_1/probe32 [get_nets [list example_top/Read_Fifo_rden ]]
+create_debug_port u_ila_1 probe
+set_property port_width 1 [get_debug_ports u_ila_1/probe33]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_1/probe33]
+connect_debug_port u_ila_1/probe33 [get_nets [list example_top/S_FeatureExtraction_flag_reg1 ]]
+set_property port_width 8 [get_debug_ports u_ila_2/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe0]
+connect_debug_port u_ila_2/probe0 [get_nets [list {example_top/MonopulseExHold[0]} {example_top/MonopulseExHold[1]} {example_top/MonopulseExHold[2]} {example_top/MonopulseExHold[3]} {example_top/MonopulseExHold[4]} {example_top/MonopulseExHold[5]} {example_top/MonopulseExHold[6]} {example_top/MonopulseExHold[7]} ]]
+create_debug_port u_ila_2 probe
+set_property port_width 8 [get_debug_ports u_ila_2/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe1]
+connect_debug_port u_ila_2/probe1 [get_nets [list {MonopulseExThreshould[0]} {MonopulseExThreshould[1]} {MonopulseExThreshould[2]} {MonopulseExThreshould[3]} {MonopulseExThreshould[4]} {MonopulseExThreshould[5]} {MonopulseExThreshould[6]} {MonopulseExThreshould[7]} ]]
+create_debug_port u_ila_2 probe
+set_property port_width 1 [get_debug_ports u_ila_2/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe2]
+connect_debug_port u_ila_2/probe2 [get_nets [list data_reg5_1 ]]
+create_debug_port u_ila_2 probe
+set_property port_width 1 [get_debug_ports u_ila_2/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe3]
+connect_debug_port u_ila_2/probe3 [get_nets [list data_reg5_2 ]]
+create_debug_port u_ila_2 probe
+set_property port_width 1 [get_debug_ports u_ila_2/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe4]
+connect_debug_port u_ila_2/probe4 [get_nets [list SendOver ]]
+create_debug_port u_ila_2 probe
+set_property port_width 1 [get_debug_ports u_ila_2/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe5]
+connect_debug_port u_ila_2/probe5 [get_nets [list SendOver1 ]]
+create_debug_port u_ila_2 probe
+set_property port_width 1 [get_debug_ports u_ila_2/probe6]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe6]
+connect_debug_port u_ila_2/probe6 [get_nets [list SendOver_reg1 ]]
+create_debug_port u_ila_2 probe
+set_property port_width 1 [get_debug_ports u_ila_2/probe7]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe7]
+connect_debug_port u_ila_2/probe7 [get_nets [list SendOver_reg2 ]]
+create_debug_port u_ila_2 probe
+set_property port_width 1 [get_debug_ports u_ila_2/probe8]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe8]
+connect_debug_port u_ila_2/probe8 [get_nets [list example_top/SendToArm_begin ]]
+create_debug_port u_ila_2 probe
+set_property port_width 1 [get_debug_ports u_ila_2/probe9]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe9]
+connect_debug_port u_ila_2/probe9 [get_nets [list example_top/SendToArm_Over ]]
+create_debug_port u_ila_2 probe
+set_property port_width 1 [get_debug_ports u_ila_2/probe10]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe10]
+connect_debug_port u_ila_2/probe10 [get_nets [list StartSample ]]
+create_debug_port u_ila_2 probe
+set_property port_width 1 [get_debug_ports u_ila_2/probe11]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe11]
+connect_debug_port u_ila_2/probe11 [get_nets [list StartSample1 ]]
+create_debug_port u_ila_2 probe
+set_property port_width 1 [get_debug_ports u_ila_2/probe12]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe12]
+connect_debug_port u_ila_2/probe12 [get_nets [list StartSample_reg1 ]]
+create_debug_port u_ila_2 probe
+set_property port_width 1 [get_debug_ports u_ila_2/probe13]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_2/probe13]
+connect_debug_port u_ila_2/probe13 [get_nets [list StartSample_reg2 ]]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+reset_run impl_1

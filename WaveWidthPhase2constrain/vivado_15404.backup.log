@@ -1,0 +1,60 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon May 25 10:09:13 2020
+# Process ID: 15404
+# Current directory: E:/1PD/FPGA/My/WaveWidthPhase2constrain
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8980 E:\1PD\FPGA\My\WaveWidthPhase2constrain\PLToPS1.xpr
+# Log file: E:/1PD/FPGA/My/WaveWidthPhase2constrain/vivado.log
+# Journal file: E:/1PD/FPGA/My/WaveWidthPhase2constrain\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Software/Xilinx17.4/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 969.023 ; gain = 316.848
+update_compile_order -fileset sources_1
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 1509 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Device 21-403] Loading part xc7z035ffg676-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Chipscope 16-324] Core: u_ila_0 UUID: 23e7d65a-79bc-59f7-bc47-406c1714dfae 
+Parsing XDC File [E:/1PD/FPGA/My/WaveWidthPhase2constrain/.Xil/Vivado-15404-DESKTOP-G3B5TCR/dcp0/system_wrapper_board.xdc]
+Finished Parsing XDC File [E:/1PD/FPGA/My/WaveWidthPhase2constrain/.Xil/Vivado-15404-DESKTOP-G3B5TCR/dcp0/system_wrapper_board.xdc]
+Parsing XDC File [E:/1PD/FPGA/My/WaveWidthPhase2constrain/.Xil/Vivado-15404-DESKTOP-G3B5TCR/dcp0/system_wrapper_early.xdc]
+Finished Parsing XDC File [E:/1PD/FPGA/My/WaveWidthPhase2constrain/.Xil/Vivado-15404-DESKTOP-G3B5TCR/dcp0/system_wrapper_early.xdc]
+Parsing XDC File [E:/1PD/FPGA/My/WaveWidthPhase2constrain/.Xil/Vivado-15404-DESKTOP-G3B5TCR/dcp0/system_wrapper.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.srcs/constrs_1/imports/imports/example_top.xdc:181]
+INFO: [Timing 38-2] Deriving generated clocks [E:/1PD/FPGA/My/WaveWidthPhase2constrain/PLToPS1.srcs/constrs_1/imports/imports/example_top.xdc:181]
+get_clocks: Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 2135.164 ; gain = 595.863
+Finished Parsing XDC File [E:/1PD/FPGA/My/WaveWidthPhase2constrain/.Xil/Vivado-15404-DESKTOP-G3B5TCR/dcp0/system_wrapper.xdc]
+Parsing XDC File [E:/1PD/FPGA/My/WaveWidthPhase2constrain/.Xil/Vivado-15404-DESKTOP-G3B5TCR/dcp0/system_wrapper_late.xdc]
+Finished Parsing XDC File [E:/1PD/FPGA/My/WaveWidthPhase2constrain/.Xil/Vivado-15404-DESKTOP-G3B5TCR/dcp0/system_wrapper_late.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2181.465 ; gain = 37.852
+Restored from archive | CPU: 4.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2181.465 ; gain = 37.852
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 313 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 56 instances
+  IOBUFDS_DIFF_OUT_DCIEN => IOBUFDS_DIFF_OUT_DCIEN (IBUFDS_IBUFDISABLE_INT, IBUFDS_IBUFDISABLE_INT, INV, OBUFTDS_DCIEN, OBUFTDS_DCIEN): 2 instances
+  IOBUF_DCIEN => IOBUF_DCIEN (IBUF_IBUFDISABLE, OBUFT_DCIEN): 16 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 1 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 221 instances
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 8 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 8 instances
+  SRLC32E => SRL16E: 1 instances
+
+open_run: Time (s): cpu = 00:00:47 ; elapsed = 00:00:42 . Memory (MB): peak = 2412.496 ; gain = 1433.074
+open_report: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 2491.273 ; gain = 66.863
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon May 25 10:12:05 2020...
