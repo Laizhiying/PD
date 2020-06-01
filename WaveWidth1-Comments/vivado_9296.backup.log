@@ -1,0 +1,74 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sat Apr 18 14:33:19 2020
+# Process ID: 9296
+# Current directory: E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10928 E:\CE\FPGA\PD\Code\My\WaveWidth1-Comments\PLToPS1.xpr
+# Log file: E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/vivado.log
+# Journal file: E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/PLToPS1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:45 ; elapsed = 00:00:44 . Memory (MB): peak = 955.340 ; gain = 246.109
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Sat Apr 18 14:38:46 2020] Launched impl_1...
+Run output will be captured here: E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/PLToPS1.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 2784 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Device 21-403] Loading part xc7z035ffg676-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/.Xil/Vivado-9296-LZY/dcp0/system_wrapper_board.xdc]
+Finished Parsing XDC File [E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/.Xil/Vivado-9296-LZY/dcp0/system_wrapper_board.xdc]
+Parsing XDC File [E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/.Xil/Vivado-9296-LZY/dcp0/system_wrapper_early.xdc]
+Finished Parsing XDC File [E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/.Xil/Vivado-9296-LZY/dcp0/system_wrapper_early.xdc]
+Parsing XDC File [E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/.Xil/Vivado-9296-LZY/dcp0/system_wrapper.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/PLToPS1.srcs/constrs_1/imports/imports/example_top.xdc:174]
+INFO: [Timing 38-2] Deriving generated clocks [E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/PLToPS1.srcs/constrs_1/imports/imports/example_top.xdc:174]
+get_clocks: Time (s): cpu = 00:00:33 ; elapsed = 00:00:29 . Memory (MB): peak = 2226.043 ; gain = 606.883
+WARNING: [Vivado 12-627] No clocks matched 'clk_out3_clk_wiz_0'. [E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/PLToPS1.srcs/constrs_1/imports/imports/example_top.xdc:174]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/PLToPS1.srcs/constrs_1/imports/imports/example_top.xdc:174]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks clk_out3_clk_wiz_0]'. [E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/PLToPS1.srcs/constrs_1/imports/imports/example_top.xdc:174]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+Finished Parsing XDC File [E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/.Xil/Vivado-9296-LZY/dcp0/system_wrapper.xdc]
+Parsing XDC File [E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/.Xil/Vivado-9296-LZY/dcp0/system_wrapper_late.xdc]
+Finished Parsing XDC File [E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/.Xil/Vivado-9296-LZY/dcp0/system_wrapper_late.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2312.207 ; gain = 42.906
+Restored from archive | CPU: 8.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2312.207 ; gain = 42.906
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1001 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 720 instances
+  IOBUFDS_DIFF_OUT_DCIEN => IOBUFDS_DIFF_OUT_DCIEN (IBUFDS_IBUFDISABLE_INT, IBUFDS_IBUFDISABLE_INT, INV, OBUFTDS_DCIEN, OBUFTDS_DCIEN): 2 instances
+  IOBUF_DCIEN => IOBUF_DCIEN (IBUF_IBUFDISABLE, OBUFT_DCIEN): 16 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 1 instances
+  RAM128X1D => RAM128X1D (RAMD64E, RAMD64E, MUXF7, MUXF7, RAMD64E, RAMD64E): 8 instances
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 16 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 221 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 8 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 8 instances
+  SRLC32E => SRL16E: 1 instances
+
+open_run: Time (s): cpu = 00:02:00 ; elapsed = 00:01:43 . Memory (MB): peak = 2419.844 ; gain = 1440.371
+open_report: Time (s): cpu = 00:00:31 ; elapsed = 00:00:21 . Memory (MB): peak = 2523.832 ; gain = 86.402
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+reset_run impl_1 -prev_step 
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+

@@ -1,0 +1,690 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 1656
+License: Customer
+
+Current time: 	Sun Feb 09 10:07:04 CST 2020
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1366x768
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 51 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	D:/Xilinx/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	D:/Xilinx/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	lzy
+User home directory: C:/Users/lzy
+User working directory: E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: D:/Xilinx/Vivado
+HDI_APPROOT: D:/Xilinx/Vivado/2017.4
+RDI_DATADIR: D:/Xilinx/Vivado/2017.4/data
+RDI_BINDIR: D:/Xilinx/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/lzy/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/lzy/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/lzy/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	D:/Xilinx/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/vivado.log
+Vivado journal file location: 	E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/vivado.jou
+Engine tmp dir: 	E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/.Xil/Vivado-1656-LZY
+
+GUI allocated memory:	137 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 491 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// [GUI Memory]: 47 MB (+46375kb) [00:00:21]
+// [Engine Memory]: 452 MB (+322042kb) [00:00:21]
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [Engine Memory]: 485 MB (+11011kb) [00:00:23]
+// Opening Vivado Project: E:\CE\FPGA\PD\Code\My\WaveWidth1-Comments\PLToPS1.xpr. Version: Vivado v2017.4 
+// bs (cj):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/PLToPS1.xpr 
+// [GUI Memory]: 60 MB (+11811kb) [00:00:26]
+// HMemoryUtils.trashcanNow. Engine heap size: 521 MB. GUI used memory: 33 MB. Current time: 2/9/20 10:07:06 AM CST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// [Engine Memory]: 537 MB (+29350kb) [00:00:31]
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 560 MB. GUI used memory: 31 MB. Current time: 2/9/20 10:07:26 AM CST
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 571 MB (+7032kb) [00:00:51]
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 609 MB (+10072kb) [00:00:56]
+// [Engine Memory]: 640 MB (+1264kb) [00:01:01]
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 640 MB. GUI used memory: 32 MB. Current time: 2/9/20 10:07:41 AM CST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 677 MB (+4981kb) [00:01:09]
+// [Engine Memory]: 724 MB (+13985kb) [00:01:13]
+// [GUI Memory]: 68 MB (+5506kb) [00:01:13]
+// [GUI Memory]: 78 MB (+6595kb) [00:01:17]
+// Tcl Message: open_project E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/PLToPS1.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'E:/1PD/FPGA/My/WaveWidth1' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.4/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 764 MB. GUI used memory: 59 MB. Current time: 2/9/20 10:07:59 AM CST
+// Tcl Message: open_project: Time (s): cpu = 00:00:42 ; elapsed = 00:00:56 . Memory (MB): peak = 885.629 ; gain = 235.098 
+// [Engine Memory]: 773 MB (+12779kb) [00:01:22]
+// Project name: PLToPS1; location: E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments; part: xc7z035ffg676-2
+dismissDialog("Open Project"); // bs (cj)
+// [GUI Memory]: 86 MB (+3765kb) [00:01:23]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 91 MB (+611kb) [00:02:28]
+// [GUI Memory]: 96 MB (+976kb) [00:04:48]
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// [GUI Memory]: 101 MB (+280kb) [00:11:04]
+// PAPropertyPanels.initPanels (system_wrapper.v) elapsed time: 0.4s
+// Elapsed time: 1064 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system_wrapper (system_wrapper.v)]", 1, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system_wrapper (system_wrapper.v), system_i : system (system.bd)]", 2, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+// Launch External Editor: 'D:/Xilinx/Sublime Text 3/sublime_text.exe "E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/PLToPS1.srcs/sources_1/bd/system/hdl/system_wrapper.v" -l12'
+// [GUI Memory]: 107 MB (+323kb) [00:19:12]
+// Elapsed time: 29 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system_wrapper (system_wrapper.v), example_top : example_top (example_top.v)]", 4); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system_wrapper (system_wrapper.v), example_top : example_top (example_top.v), MonopulseEx_Arithmetic1 : MonopulseEx_Arithmetic (MonopulseEx_Arithmetic.v)]", 9); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system_wrapper (system_wrapper.v), example_top : example_top (example_top.v), MonopulseEx_Arithmetic1 : MonopulseEx_Arithmetic (MonopulseEx_Arithmetic.v), Monopulse_extraction_1 : Monopulse_extraction_1 (Monopulse_extraction_1.v)]", 10, false); // B (D, cj)
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// Elapsed time: 157 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system_wrapper (system_wrapper.v), example_top : example_top (example_top.v), MonopulseEx_Arithmetic1 : MonopulseEx_Arithmetic (MonopulseEx_Arithmetic.v), Monopulse_extraction_1 : Monopulse_extraction_1 (Monopulse_extraction_1.v)]", 10, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system_wrapper (system_wrapper.v), example_top : example_top (example_top.v), MonopulseEx_Arithmetic1 : MonopulseEx_Arithmetic (MonopulseEx_Arithmetic.v), Monopulse_extraction_1 : Monopulse_extraction_1 (Monopulse_extraction_1.v)]", 10, false, false, false, false, false, true); // B (D, cj) - Double Click
+// Launch External Editor: 'D:/Xilinx/Sublime Text 3/sublime_text.exe "E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/PLToPS1.srcs/sources_1/imports/imports/Monopulse_extraction_1.v" -l1'
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking too long to process. Increasing delay to 3000 ms.
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 113 MB (+751kb) [00:22:55]
+// WARNING: HTimer (StateMonitor Timer) is taking too long to process. Increasing delay to 4000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 63 MB. Current time: 2/9/20 10:38:02 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 60 MB. Current time: 2/9/20 11:08:02 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 59 MB. Current time: 2/9/20 11:38:03 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 60 MB. Current time: 2/9/20 12:08:03 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 59 MB. Current time: 2/9/20 12:38:03 PM CST
+// Elapsed time: 8181 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system_wrapper (system_wrapper.v), example_top : example_top (example_top.v)]", 4, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system_wrapper (system_wrapper.v), example_top : example_top (example_top.v)]", 4, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system_wrapper (system_wrapper.v), example_top : example_top (example_top.v)]", 4, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+// Launch External Editor: 'D:/Xilinx/Sublime Text 3/sublime_text.exe "E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/PLToPS1.srcs/sources_1/imports/imports/example_top.v" -l4'
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 59 MB. Current time: 2/9/20 1:08:04 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 59 MB. Current time: 2/9/20 4:15:24 PM CST
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 59 MB. Current time: 2/9/20 4:45:27 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 59 MB. Current time: 2/9/20 5:15:27 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 58 MB. Current time: 2/9/20 5:45:27 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 58 MB. Current time: 2/9/20 6:15:28 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 59 MB. Current time: 2/9/20 6:45:28 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 59 MB. Current time: 2/9/20 7:15:28 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 58 MB. Current time: 2/9/20 7:45:29 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 59 MB. Current time: 2/9/20 8:15:29 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 58 MB. Current time: 2/9/20 8:45:29 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 58 MB. Current time: 2/9/20 9:15:30 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 58 MB. Current time: 2/9/20 9:45:30 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 58 MB. Current time: 2/9/20 10:15:31 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 58 MB. Current time: 2/9/20 10:45:31 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 59 MB. Current time: 2/9/20 11:15:31 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 59 MB. Current time: 2/9/20 11:45:32 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 58 MB. Current time: 2/10/20 12:15:32 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 58 MB. Current time: 2/10/20 12:45:32 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 59 MB. Current time: 2/10/20 1:15:33 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 59 MB. Current time: 2/10/20 1:45:33 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 58 MB. Current time: 2/10/20 2:15:33 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 58 MB. Current time: 2/10/20 2:45:34 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 58 MB. Current time: 2/10/20 3:15:34 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 58 MB. Current time: 2/10/20 3:45:34 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 59 MB. Current time: 2/10/20 4:15:35 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 59 MB. Current time: 2/10/20 4:45:35 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 58 MB. Current time: 2/10/20 5:15:35 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 58 MB. Current time: 2/10/20 5:45:36 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 59 MB. Current time: 2/10/20 6:15:36 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 58 MB. Current time: 2/10/20 6:45:36 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 58 MB. Current time: 2/10/20 7:15:37 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 59 MB. Current time: 2/10/20 7:45:37 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 58 MB. Current time: 2/10/20 8:15:38 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 58 MB. Current time: 2/10/20 8:45:38 AM CST
+// [GUI Memory]: 119 MB (+1032kb) [23:06:21]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 126 MB (+394kb) [23:08:05]
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 60 MB. Current time: 2/10/20 9:15:38 AM CST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 75375 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system_wrapper (system_wrapper.v), example_top : example_top (example_top.v)]", 4); // B (D, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 60 MB. Current time: 2/10/20 9:45:39 AM CST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 60 MB. Current time: 2/10/20 10:15:39 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 60 MB. Current time: 2/10/20 10:45:39 AM CST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 58 MB. Current time: 2/10/20 11:15:40 AM CST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 7326 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system_wrapper (system_wrapper.v), example_top : example_top (example_top.v), Phase : Phase (Phase.v)]", 10, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system_wrapper (system_wrapper.v), example_top : example_top (example_top.v), Phase : Phase (Phase.v)]", 10, false, false, false, false, false, true); // B (D, cj) - Double Click
+// Launch External Editor: 'D:/Xilinx/Sublime Text 3/sublime_text.exe "E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/PLToPS1.srcs/sources_1/new/Phase.v" -l1'
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 60 MB. Current time: 2/10/20 11:45:40 AM CST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 1715 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system_wrapper (system_wrapper.v), example_top : example_top (example_top.v), MonopulseEx_Arithmetic1 : MonopulseEx_Arithmetic (MonopulseEx_Arithmetic.v)]", 9, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system_wrapper (system_wrapper.v), example_top : example_top (example_top.v), MonopulseEx_Arithmetic1 : MonopulseEx_Arithmetic (MonopulseEx_Arithmetic.v), Monopulse_extraction_1 : Monopulse_extraction_1 (Monopulse_extraction_1.v)]", 10, false, false, false, false, false, true); // B (D, cj) - Double Click
+// Launch External Editor: 'D:/Xilinx/Sublime Text 3/sublime_text.exe "E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/PLToPS1.srcs/sources_1/imports/imports/MonopulseEx_Arithmetic.v" -l1'
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 59 MB. Current time: 2/10/20 12:15:40 PM CST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 59 MB. Current time: 2/10/20 12:45:41 PM CST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 60 MB. Current time: 2/10/20 1:15:41 PM CST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// WARNING: HTimer (WrapperUtils Delayed Delete Timer) is taking too long to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 60 MB. Current time: 2/10/20 2:49:02 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 60 MB. Current time: 2/10/20 3:19:06 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 60 MB. Current time: 2/10/20 3:49:06 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 60 MB. Current time: 2/10/20 4:19:06 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 59 MB. Current time: 2/10/20 4:49:07 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 59 MB. Current time: 2/10/20 5:19:07 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 60 MB. Current time: 2/10/20 5:49:07 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 59 MB. Current time: 2/10/20 6:19:08 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 59 MB. Current time: 2/10/20 6:49:08 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 59 MB. Current time: 2/10/20 7:19:09 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 60 MB. Current time: 2/10/20 7:49:09 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 59 MB. Current time: 2/10/20 8:19:09 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 60 MB. Current time: 2/10/20 8:49:10 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 60 MB. Current time: 2/10/20 9:19:10 PM CST
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 5000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 5000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 6000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 6000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 7000 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 8000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 9000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 788 MB. GUI used memory: 102 MB. Current time: 2/10/20 9:49:24 PM CST
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 7000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 8000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 10000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 9000 ms.

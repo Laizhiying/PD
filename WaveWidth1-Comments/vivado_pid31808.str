@@ -1,0 +1,228 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 31808
+License: Customer
+
+Current time: 	Wed Dec 11 11:12:27 CST 2019
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 6
+
+Screen size: 2048x1152
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 180 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	D:/Software/Xilinx17.4/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	D:/Software/Xilinx17.4/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	HP
+User home directory: C:/Users/HP
+User working directory: E:/1PD/FPGA/My/SramOfSendCirclePhase1
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: D:/Software/Xilinx17.4/Vivado
+HDI_APPROOT: D:/Software/Xilinx17.4/Vivado/2017.4
+RDI_DATADIR: D:/Software/Xilinx17.4/Vivado/2017.4/data
+RDI_BINDIR: D:/Software/Xilinx17.4/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/HP/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/HP/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/HP/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	D:/Software/Xilinx17.4/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	E:/1PD/FPGA/My/SramOfSendCirclePhase1/vivado.log
+Vivado journal file location: 	E:/1PD/FPGA/My/SramOfSendCirclePhase1/vivado.jou
+Engine tmp dir: 	E:/1PD/FPGA/My/SramOfSendCirclePhase1/.Xil/Vivado-31808-DESKTOP-G3B5TCR
+
+GUI allocated memory:	190 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 556 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 50 MB (+49803kb) [00:00:05]
+// [Engine Memory]: 464 MB (+334600kb) [00:00:05]
+// Opening Vivado Project: E:\1PD\FPGA\My\SramOfSendCirclePhase1\PLToPS1.xpr. Version: Vivado v2017.4 
+// bs (cj):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project E:/1PD/FPGA/My/SramOfSendCirclePhase1/PLToPS1.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// [GUI Memory]: 63 MB (+10657kb) [00:00:07]
+// [Engine Memory]: 544 MB (+59793kb) [00:00:07]
+// HMemoryUtils.trashcanNow. Engine heap size: 583 MB. GUI used memory: 35 MB. Current time: 12/11/19 11:12:29 AM CST
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 633 MB (+65462kb) [00:00:12]
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 675 MB (+10537kb) [00:00:17]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 741 MB (+33625kb) [00:00:18]
+// [GUI Memory]: 72 MB (+6608kb) [00:00:19]
+// [Engine Memory]: 780 MB (+1914kb) [00:00:19]
+// [GUI Memory]: 79 MB (+3823kb) [00:00:20]
+// Tcl Message: open_project E:/1PD/FPGA/My/SramOfSendCirclePhase1/PLToPS1.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'E:/1PD/FPGA/My/SramOfSendCircle2' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Software/Xilinx17.4/Vivado/2017.4/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:16 . Memory (MB): peak = 992.176 ; gain = 294.133 
+// Project name: PLToPS1; location: E:/1PD/FPGA/My/SramOfSendCirclePhase1; part: xc7z035ffg676-2
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 821 MB. GUI used memory: 55 MB. Current time: 12/11/19 11:12:50 AM CST
+// [Engine Memory]: 821 MB (+2041kb) [00:00:30]
+// Elapsed time: 15 seconds
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aw (f, cj)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "Run Synthesis"); // ac (cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// x (cj): Run Synthesis: addNotify
+selectButton("PAResourceQtoS.RunRun_TASK_HAS_ALREADY_COMPLETED_AND_UP_TO_DATE_OK", "OK"); // JButton (A, G)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (x)
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Run Synthesis"); // x (cj)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 3 
+// Tcl Message: [Wed Dec 11 11:13:04 2019] Launched synth_1... Run output will be captured here: E:/1PD/FPGA/My/SramOfSendCirclePhase1/PLToPS1.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 4 seconds
+// [GUI Memory]: 86 MB (+3293kb) [00:00:44]
+dismissDialog("Starting Design Runs"); // bs (cj)
+// Elapsed time: 49 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cj)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cj): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (h, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_OR_CREATE_SOURCE_FILE, "Add"); // B (f, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+dismissFileChooser();
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+// [GUI Memory]: 93 MB (+2008kb) [00:02:08]
+// Elapsed time: 28 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "Phase"); // X (N, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// Tcl Command: 'file mkdir E:/1PD/FPGA/My/SramOfSendCirclePhase1/PLToPS1.srcs/sources_1/new'
+dismissDialog("Create Source File"); // F (c)
+// Tcl Message: file mkdir E:/1PD/FPGA/My/SramOfSendCirclePhase1/PLToPS1.srcs/sources_1/new 
+selectButton("FINISH", "Finish"); // JButton (h, c)
+// 'h' command handler elapsed time: 44 seconds
+dismissDialog("Add Sources"); // c (cj)
+// Tcl Message: close [ open E:/1PD/FPGA/My/SramOfSendCirclePhase1/PLToPS1.srcs/sources_1/new/Phase.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files E:/1PD/FPGA/My/SramOfSendCirclePhase1/PLToPS1.srcs/sources_1/new/Phase.v 
+// I (cj): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+selectButton("PAResourceAtoD.DefineModulesDialog_YOU_HAVE_MADE_CHANGES_TO_MODULE_No", "No"); // JButton (A, H)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (I)
+selectButton("PAResourceAtoD.DefineModulesDialog_YOU_HAVE_MADE_CHANGES_TO_MODULE_Yes", "Yes"); // JButton (A, H)
+dismissDialog("Define Module"); // I (cj)
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, cj)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cj): Add Sources: addNotify
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectButton("NEXT", "Next >"); // JButton (h, c)
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "Phase"); // X (N, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// HOptionPane Warning: ''Phase.v' already exists. Please enter another name. (Create Source File)'
+selectButton("PAResourceAtoD.CreateSrcFileDialog_FILE_WITH_SPECIFIED_NAME_ALREADY_OK", "OK"); // JButton (A, H)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("CANCEL", "Cancel"); // JButton (h, c)
+// 'h' command handler elapsed time: 13 seconds
+dismissDialog("Add Sources"); // c (cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 1); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Phase.v]", 2, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Phase.v]", 2, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Phase.v]", 2, false, false, false, false, false, true); // B (D, cj) - Double Click
+// Launch External Editor: 'D:/Software/Sublime/Sublime Text 3/sublime_text.exe "E:/1PD/FPGA/My/SramOfSendCirclePhase1/PLToPS1.srcs/sources_1/new/Phase.v" -l0'
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 846 MB. GUI used memory: 55 MB. Current time: 12/11/19 11:16:10 AM CST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 98 MB (+1206kb) [00:09:10]
+// TclEventType: RUN_COMPLETED
+// [Engine Memory]: 876 MB (+15073kb) [00:12:35]
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 884 MB. GUI used memory: 62 MB. Current time: 12/11/19 11:24:57 AM CST
+// ah (cj): Synthesis Completed: addNotify
+// Elapsed time: 838 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Synthesis Completed"); // ah (cj)
+// [GUI Memory]: 104 MB (+302kb) [00:40:39]
+// HMemoryUtils.trashcanNow. Engine heap size: 884 MB. GUI used memory: 61 MB. Current time: 12/11/19 11:55:00 AM CST
+// [GUI Memory]: 110 MB (+1047kb) [01:08:15]
+// HMemoryUtils.trashcanNow. Engine heap size: 884 MB. GUI used memory: 58 MB. Current time: 12/11/19 12:25:00 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 884 MB. GUI used memory: 59 MB. Current time: 12/11/19 2:42:47 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 884 MB. GUI used memory: 101 MB. Current time: 12/11/19 3:12:50 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 884 MB. GUI used memory: 71 MB. Current time: 12/11/19 3:42:51 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 884 MB. GUI used memory: 100 MB. Current time: 12/11/19 4:12:51 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 884 MB. GUI used memory: 58 MB. Current time: 12/11/19 4:42:52 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 884 MB. GUI used memory: 58 MB. Current time: 12/11/19 5:12:56 PM CST
+// [GUI Memory]: 115 MB (+21kb) [06:14:46]
+// HMemoryUtils.trashcanNow. Engine heap size: 884 MB. GUI used memory: 84 MB. Current time: 12/11/19 5:42:56 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 884 MB. GUI used memory: 84 MB. Current time: 12/11/19 6:12:56 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 884 MB. GUI used memory: 84 MB. Current time: 12/11/19 6:42:57 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 884 MB. GUI used memory: 57 MB. Current time: 12/11/19 7:36:47 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 884 MB. GUI used memory: 58 MB. Current time: 12/11/19 8:06:47 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 884 MB. GUI used memory: 58 MB. Current time: 12/11/19 8:36:48 PM CST

@@ -1,0 +1,37 @@
+$date
+        2019-Nov-28 16:40:29
+$end
+$version
+        Vivado v2017.4 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 1 " system_i_n_36 $end
+$var reg 1 # system_i_n_35 $end
+$var reg 16 $ mem_a32 [15:0] $end
+$var reg 1 4 system_i_n_18 $end
+$var reg 1 5 system_i_n_17 $end
+$var reg 1 6 system_i_n_16 $end
+$var reg 1 7 system_i_n_15 $end
+$var reg 1 8 system_i_n_14 $end
+$var reg 1 9 system_i_n_13 $end
+$var reg 1 : system_i_n_12 $end
+$var reg 1 ; system_i_n_11 $end
+$var reg 1 < system_i_n_10 $end
+$var reg 1 = system_i_n_9 $end
+$var reg 1 > system_i_n_8 $end
+$var reg 1 ? system_i_n_7 $end
+$var reg 1 @ system_i_n_6 $end
+$var reg 1 A system_i_n_5 $end
+$var reg 32 B mem_dq_o_0 [31:0] $end
+$var reg 32 b mem_dq_i_0_reg_n_2_ [31:0] $end
+$var reg 1 $" mem_cen_0 $end
+$var reg 1 %" mem_oen_0 $end
+$var reg 1 &" mem_wen_0 $end
+$var reg 1 '" _TRIGGER $end
+$var reg 1 (" _WINDOW $end
+$var reg 1 )" _GAP $end
+$upscope $end
+$enddefinitions $end

@@ -1,0 +1,51 @@
+$date
+        2019-Dec-24 09:11:44
+$end
+$version
+        Vivado v2017.4 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 32 " example_top/CountRead_tem [31:0] $end
+$var reg 32 B example_top/CountWrite_tem [31:0] $end
+$var reg 128 b example_top/app_rd_data [127:0] $end
+$var reg 11 &# example_top/Read_Fifo_rusdw_o [10:0] $end
+$var reg 128 1# example_top/app_wdf_data [127:0] $end
+$var reg 8 S$ example_top/Read_Fifo_wusdw_o [7:0] $end
+$var reg 8 [$ example_top/Write_Fifo_rusdw_o [7:0] $end
+$var reg 16 c$ example_top/Read_Fifo_Out [15:0] $end
+$var reg 16 s$ example_top/Read_Fifo_Out_r [15:0] $end
+$var reg 29 %% example_top/app_addr_begin [28:0] $end
+$var reg 4 B% example_top/state1 [3:0] $end
+$var reg 4 F% example_top/state [3:0] $end
+$var reg 29 J% example_top/app_addr [28:0] $end
+$var reg 6 g% u_ila_0_Period_count [5:0] $end
+$var reg 1 m% example_top/app_en $end
+$var reg 1 n% example_top/app_rd_data_valid $end
+$var reg 1 o% u_ila_0_app_rdy $end
+$var reg 1 p% example_top/app_wdf_end $end
+$var reg 1 q% example_top/app_wdf_rdy $end
+$var reg 1 r% example_top/app_wdf_wren $end
+$var reg 1 s% example_top/ddr3_oneperiod_flag $end
+$var reg 1 t% example_top/ddr3read_en $end
+$var reg 1 u% example_top/ddr3write_en $end
+$var reg 1 v% example_top/OnePeriod_flag $end
+$var reg 1 w% example_top/Phase/OnePeriodFlag $end
+$var reg 1 x% example_top/Phase/OneSampleFlag $end
+$var reg 1 y% example_top/ProsessIn $end
+$var reg 1 z% example_top/ProsessIn1 $end
+$var reg 1 {% example_top/Read_Fifo_empty $end
+$var reg 1 |% example_top/Read_Fifo_full $end
+$var reg 1 }% u_ila_0_Read_Fifo_rden $end
+$var reg 1 ~% example_top/Read_Fifo_rst $end
+$var reg 1 !& example_top/Read_Fifo_wren $end
+$var reg 1 "& example_top/Write_Fifo_empty $end
+$var reg 1 #& example_top/Write_Fifo_full $end
+$var reg 1 $& example_top/WriteSign $end
+$var reg 1 %& _TRIGGER $end
+$var reg 1 && _WINDOW $end
+$var reg 1 '& _GAP $end
+$upscope $end
+$enddefinitions $end

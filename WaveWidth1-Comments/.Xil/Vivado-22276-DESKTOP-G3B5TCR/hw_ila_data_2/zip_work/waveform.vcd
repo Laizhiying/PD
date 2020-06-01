@@ -1,0 +1,40 @@
+$date
+        2019-Dec-16 21:29:54
+$end
+$version
+        Vivado v2017.4 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 41 " example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data [40:0] $end
+$var reg 21 K u_ila_1_Square_data [20:0] $end
+$var reg 8 ` example_top/MonopulseEx_Arithmetic1/Arithmetic1/Monopulse_data_vi [7:0] $end
+$var reg 9 h example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data_n [8:0] $end
+$var reg 10 q example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data2 [9:0] $end
+$var reg 33 { example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data [32:0] $end
+$var reg 3 >" u_ila_1_Arithmetic_State [2:0] $end
+$var reg 6 A" example_top/Behind_area [5:0] $end
+$var reg 10 G" Behind_area [15:6] $end
+$var reg 16 Q" example_top/Count [15:0] $end
+$var reg 41 a" example_top/Fourth_moment [40:0] $end
+$var reg 24 ,# example_top/Second_moment [23:0] $end
+$var reg 16 D# example_top/ii [15:0] $end
+$var reg 16 T# example_top/time_cnt [15:0] $end
+$var reg 8 d# example_top/Write_Fifo_datain [7:0] $end
+$var reg 33 l# example_top/Third_moment [32:0] $end
+$var reg 32 /$ example_top/PeriodPoint_num [31:0] $end
+$var reg 16 O$ u_ila_1_Monopulse_data1 [15:0] $end
+$var reg 8 _$ u_ila_1_Monopulse_data_1 [7:0] $end
+$var reg 16 g$ Monopulse_num [15:0] $end
+$var reg 16 w$ example_top/Pulse_point_num [15:0] $end
+$var reg 2 )% example_top/WaveState [1:0] $end
+$var reg 16 +% example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count [15:0] $end
+$var reg 1 ;% u_ila_1_FeatureExtraction_flag $end
+$var reg 1 <% SendIRQ_OBUF $end
+$var reg 1 =% _TRIGGER $end
+$var reg 1 >% _WINDOW $end
+$var reg 1 ?% _GAP $end
+$upscope $end
+$enddefinitions $end

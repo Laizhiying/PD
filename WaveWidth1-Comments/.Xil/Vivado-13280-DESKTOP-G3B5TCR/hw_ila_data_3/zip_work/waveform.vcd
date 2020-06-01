@@ -1,0 +1,24 @@
+$date
+        2019-Dec-12 22:03:12
+$end
+$version
+        Vivado v2017.4 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 8 " example_top/MonopulseExHold [7:0] $end
+$var reg 1 * SendOver $end
+$var reg 1 + SendOver1 $end
+$var reg 1 , SendOver_reg1 $end
+$var reg 1 - SendOver_reg2 $end
+$var reg 1 . StartSample $end
+$var reg 1 / StartSample1 $end
+$var reg 1 0 StartSample_reg1 $end
+$var reg 1 1 StartSample_reg2 $end
+$var reg 1 2 _TRIGGER $end
+$var reg 1 3 _WINDOW $end
+$var reg 1 4 _GAP $end
+$upscope $end
+$enddefinitions $end

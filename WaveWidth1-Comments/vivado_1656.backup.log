@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sun Feb  9 10:05:53 2020
+# Process ID: 1656
+# Current directory: E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9112 E:\CE\FPGA\PD\Code\My\WaveWidth1-Comments\PLToPS1.xpr
+# Log file: E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/vivado.log
+# Journal file: E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/CE/FPGA/PD/Code/My/WaveWidth1-Comments/PLToPS1.xpr
+INFO: [Project 1-313] Project file moved from 'E:/1PD/FPGA/My/WaveWidth1' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IP Output Repository Path: Could not find the directory 'E:/CE/FPGA/PD/Code/My/SramOfSendCirclePhase2/PLToPS1.cache/ip', nor could it be found using path 'E:/1PD/FPGA/My/SramOfSendCirclePhase2/PLToPS1.cache/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:42 ; elapsed = 00:00:56 . Memory (MB): peak = 885.629 ; gain = 235.098
+update_compile_order -fileset sources_1

@@ -1,0 +1,18 @@
+$date
+        2019-Nov-26 16:45:12
+$end
+$version
+        Vivado v2017.4 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 1 " StartSample $end
+$var reg 1 # StartSample_reg1 $end
+$var reg 1 $ StartSample_reg2 $end
+$var reg 1 % _TRIGGER $end
+$var reg 1 & _WINDOW $end
+$var reg 1 ' _GAP $end
+$upscope $end
+$enddefinitions $end

@@ -1,0 +1,349 @@
+$date
+        2019-Dec-16 21:33:59
+$end
+$version
+        Vivado v2017.4 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 32 " example_top/CountRead_tem [31:0] $end
+$var reg 32 B example_top/CountWrite_tem [31:0] $end
+$var reg 8 b example_top/Write_Fifo_rusdw_o [7:0] $end
+$var reg 8 j example_top/Read_Fifo_wusdw_o [7:0] $end
+$var reg 11 r example_top/Read_Fifo_rusdw_o [10:0] $end
+$var reg 4 } example_top/state1 [3:0] $end
+$var reg 128 #" example_top/app_wdf_data [127:0] $end
+$var reg 29 E# example_top/app_addr [28:0] $end
+$var reg 128 b# example_top/app_rd_data [127:0] $end
+$var reg 16 &% example_top/Read_Fifo_Out [15:0] $end
+$var reg 16 6% example_top/Read_Fifo_Out_r [15:0] $end
+$var reg 29 F% example_top/app_addr_begin [28:0] $end
+$var reg 1 c% u_ila_0_state $end
+$var reg 3 d% example_top/state [3:1] $end
+$var reg 6 g% u_ila_0_Period_count [5:0] $end
+$var reg 1 m% example_top/app_en $end
+$var reg 1 n% example_top/app_rd_data_valid $end
+$var reg 1 o% u_ila_0_app_rdy $end
+$var reg 1 p% example_top/app_wdf_rdy $end
+$var reg 1 q% example_top/ddr3_oneperiod_flag $end
+$var reg 1 r% example_top/ddr3read_en $end
+$var reg 1 s% example_top/ddr3write_en $end
+$var reg 1 t% example_top/OnePeriod_flag $end
+$var reg 1 u% example_top/Phase/OnePeriodFlag $end
+$var reg 1 v% example_top/Phase/OneSampleFlag $end
+$var reg 1 w% example_top/ProsessIn $end
+$var reg 1 x% example_top/ProsessIn1 $end
+$var reg 1 y% example_top/Read_Fifo_empty $end
+$var reg 1 z% example_top/Read_Fifo_full $end
+$var reg 1 {% u_ila_0_Read_Fifo_rden $end
+$var reg 1 |% example_top/Read_Fifo_rst $end
+$var reg 1 }% example_top/Read_Fifo_wren $end
+$var reg 1 ~% example_top/Write_Fifo_empty $end
+$var reg 1 !& example_top/Write_Fifo_full $end
+$var reg 1 "& example_top/WriteSign $end
+$var reg 1 #& _TRIGGER $end
+$var reg 1 $& _WINDOW $end
+$var reg 1 %& _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 "
+b0 B
+b0 b
+b0 j
+b0 r
+b0 }
+b0 #"
+b0 E#
+b1000000000000000000100110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 b#
+b0 &%
+b0 6%
+b0 F%
+0c%
+b1 d%
+b10001 g%
+1m%
+0n%
+1o%
+1p%
+0q%
+1r%
+0s%
+1t%
+0u%
+0v%
+1w%
+0x%
+1y%
+0z%
+0{%
+0|%
+0}%
+0~%
+1!&
+1"&
+0#&
+1$&
+0%&
+$end
+#18
+0m%
+0o%
+0r%
+#20
+1m%
+1o%
+1r%
+#21
+0m%
+0o%
+0r%
+#26
+1m%
+1o%
+1r%
+#27
+0m%
+0o%
+0r%
+#56
+1m%
+1o%
+1r%
+#58
+0m%
+0o%
+0r%
+#60
+1m%
+1o%
+1r%
+#158
+0m%
+0o%
+0r%
+#160
+1m%
+1o%
+1r%
+#162
+0m%
+0o%
+0r%
+#165
+1m%
+1o%
+1r%
+#167
+0m%
+0o%
+0r%
+#169
+1m%
+1o%
+1r%
+#258
+0m%
+0o%
+0r%
+#260
+1m%
+1o%
+1r%
+#262
+0m%
+0o%
+0r%
+#265
+1m%
+1o%
+1r%
+#267
+0m%
+0o%
+0r%
+#269
+1m%
+1o%
+1r%
+#358
+0m%
+0o%
+0r%
+#360
+1m%
+1o%
+1r%
+#362
+0m%
+0o%
+0r%
+#365
+1m%
+1o%
+1r%
+#367
+0m%
+0o%
+0r%
+#369
+1m%
+1o%
+1r%
+#458
+0m%
+0o%
+0r%
+#460
+1m%
+1o%
+1r%
+#462
+0m%
+0o%
+0r%
+#465
+1m%
+1o%
+1r%
+#467
+0m%
+0o%
+0r%
+#469
+1m%
+1o%
+1r%
+#512
+1#&
+#558
+0m%
+0o%
+0r%
+#560
+1m%
+1o%
+1r%
+#562
+0m%
+0o%
+0r%
+#565
+1m%
+1o%
+1r%
+#567
+0m%
+0o%
+0r%
+#569
+1m%
+1o%
+1r%
+#658
+0m%
+0o%
+0r%
+#660
+1m%
+1o%
+1r%
+#662
+0m%
+0o%
+0r%
+#665
+1m%
+1o%
+1r%
+#667
+0m%
+0o%
+0r%
+#669
+1m%
+1o%
+1r%
+#758
+0m%
+0o%
+0r%
+#760
+1m%
+1o%
+1r%
+#761
+0m%
+0o%
+0r%
+#766
+1m%
+1o%
+1r%
+#767
+0m%
+0o%
+0r%
+#796
+1m%
+1o%
+1r%
+#798
+0m%
+0o%
+0r%
+#800
+1m%
+1o%
+1r%
+#898
+0m%
+0o%
+0r%
+#900
+1m%
+1o%
+1r%
+#902
+0m%
+0o%
+0r%
+#905
+1m%
+1o%
+1r%
+#907
+0m%
+0o%
+0r%
+#909
+1m%
+1o%
+1r%
+#998
+0m%
+0o%
+0r%
+#1000
+1m%
+1o%
+1r%
+#1002
+0m%
+0o%
+0r%
+#1005
+1m%
+1o%
+1r%
+#1007
+0m%
+0o%
+0r%
+#1009
+1m%
+1o%
+1r%

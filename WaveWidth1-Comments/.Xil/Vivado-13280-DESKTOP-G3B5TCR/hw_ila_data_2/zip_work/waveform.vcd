@@ -1,0 +1,46 @@
+$date
+        2019-Dec-12 22:03:12
+$end
+$version
+        Vivado v2017.4 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 21 " u_ila_0_Square_data [20:0] $end
+$var reg 10 7 example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data2 [9:0] $end
+$var reg 8 A example_top/MonopulseEx_Arithmetic1/Arithmetic1/Monopulse_data_vi [7:0] $end
+$var reg 33 I example_top/MonopulseEx_Arithmetic1/Arithmetic1/Cube_data [32:0] $end
+$var reg 41 j example_top/MonopulseEx_Arithmetic1/Arithmetic1/Biquadrate_data [40:0] $end
+$var reg 9 5" example_top/MonopulseEx_Arithmetic1/Arithmetic1/SubtractionMean_data_n [8:0] $end
+$var reg 16 >" example_top/Count [15:0] $end
+$var reg 41 N" example_top/Fourth_moment [40:0] $end
+$var reg 16 w" u_ila_0_Monopulse_data1 [15:0] $end
+$var reg 16 )# Monopulse_num [15:0] $end
+$var reg 3 9# u_ila_0_Arithmetic_State [2:0] $end
+$var reg 16 <# example_top/Read_Fifo_Out [15:0] $end
+$var reg 24 L# example_top/Second_moment [23:0] $end
+$var reg 16 d# example_top/Pulse_point_num [15:0] $end
+$var reg 8 t# u_ila_0_Monopulse_data_1 [7:0] $end
+$var reg 6 |# example_top/Behind_area [5:0] $end
+$var reg 10 $$ Behind_area [15:6] $end
+$var reg 11 .$ example_top/Read_Fifo_rusdw_o [10:0] $end
+$var reg 33 9$ example_top/Third_moment [32:0] $end
+$var reg 2 Z$ example_top/WaveState [1:0] $end
+$var reg 25 \$ example_top/ddr3read_en1 [24:0] $end
+$var reg 8 u$ example_top/Write_Fifo_datain [7:0] $end
+$var reg 25 }$ example_top/ddr3read_en2 [24:0] $end
+$var reg 16 8% example_top/time_cnt [15:0] $end
+$var reg 16 H% example_top/ii [15:0] $end
+$var reg 16 X% example_top/MonopulseEx_Arithmetic1/Monopulse_extraction_1/send_count [15:0] $end
+$var reg 1 h% u_ila_0_FeatureExtraction_flag $end
+$var reg 1 i% SendIRQ_OBUF $end
+$var reg 1 j% example_top/Read_Fifo_empty $end
+$var reg 1 k% u_ila_0_Read_Fifo_rden $end
+$var reg 1 l% example_top/Read_Fifo_wren $end
+$var reg 1 m% _TRIGGER $end
+$var reg 1 n% _WINDOW $end
+$var reg 1 o% _GAP $end
+$upscope $end
+$enddefinitions $end
